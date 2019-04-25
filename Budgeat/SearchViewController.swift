@@ -50,7 +50,7 @@ extension SearchViewController: UITableViewDataSource, UITableViewDelegate{
         } else {
             cell?.textLabel?.text = foodData[indexPath.row]
         }
-        return cell
+        return cell!
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
