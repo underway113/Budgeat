@@ -13,13 +13,22 @@ class FoodDetailViewController: UIViewController {
     @IBAction func returnButton(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
-    var receivedImage:UIImage?
+    
+    @IBOutlet weak var categoryLabel: UILabel!
+    
+    @IBOutlet weak var priceLabel: UILabel!
     
     @IBOutlet weak var foodDetailImage: UIImageView!
+    
+    var receivedImage:UIImage?
+    var receivedCategory:String?
+    var receivedPrice:String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        categoryLabel.text = receivedCategory!
+        priceLabel.text = "Rp." + receivedPrice!
         foodDetailImage.image = receivedImage!
 
         // Do any additional setup after loading the view.
