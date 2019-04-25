@@ -58,6 +58,7 @@ extension SearchViewController: UITableViewDataSource, UITableViewDelegate{
         } else {
             cell?.textLabel?.text = foodData[indexPath.row]
         }
+        print("TestTtt")
         return cell!
     }
     
