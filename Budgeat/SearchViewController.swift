@@ -10,8 +10,8 @@ import UIKit
 
 class SearchViewController: UIViewController {
 
-    @IBOutlet weak var searchBar: UISearchBar!
     
+    @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tabelSearch: UITableView!
     
     var searchFood = [String]()
@@ -74,6 +74,6 @@ extension SearchViewController: UISearchBarDelegate{
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         searching = false
         searchBar.text = ""
-        tabelSearch.reloadData()
+        //tabelSearch.reloadData()
     }
 }
