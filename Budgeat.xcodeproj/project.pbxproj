@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1E36D48D227198D200C4C180 /* LocationsMarkerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E36D48C227198D200C4C180 /* LocationsMarkerView.swift */; };
 		1E36D48F2271994D00C4C180 /* Locations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E36D48E2271994D00C4C180 /* Locations.swift */; };
+		4618CC582271B743008DC86B /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4618CC572271B743008DC86B /* CoreLocation.framework */; };
 		927B6805227159B400382C6E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927B6804227159B400382C6E /* AppDelegate.swift */; };
 		927B680A227159B400382C6E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 927B6808227159B400382C6E /* Main.storyboard */; };
 		927B680C227159B600382C6E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 927B680B227159B600382C6E /* Assets.xcassets */; };
@@ -42,6 +43,7 @@
 /* Begin PBXFileReference section */
 		1E36D48C227198D200C4C180 /* LocationsMarkerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsMarkerView.swift; sourceTree = "<group>"; };
 		1E36D48E2271994D00C4C180 /* Locations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Locations.swift; sourceTree = "<group>"; };
+		4618CC572271B743008DC86B /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		927B6801227159B400382C6E /* Budgeat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Budgeat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		927B6804227159B400382C6E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		927B6809227159B400382C6E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4618CC582271B743008DC86B /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,6 +89,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4618CC562271B743008DC86B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4618CC572271B743008DC86B /* CoreLocation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		927B67F8227159B400382C6E = {
 			isa = PBXGroup;
 			children = (
@@ -93,6 +104,7 @@
 				927B6818227159B600382C6E /* BudgeatTests */,
 				927B6823227159B600382C6E /* BudgeatUITests */,
 				927B6802227159B400382C6E /* Products */,
+				4618CC562271B743008DC86B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -457,8 +469,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = P2H6AWX9CU;
 				INFOPLIST_FILE = Budgeat/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -477,8 +489,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = P2H6AWX9CU;
 				INFOPLIST_FILE = Budgeat/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
