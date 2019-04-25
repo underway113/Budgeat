@@ -13,7 +13,6 @@ class SearchViewController: UIViewController {
     @IBOutlet weak var tabelSearch: UITableView!
     
     @IBOutlet weak var searchBar: UISearchBar!
-    //dasdasd
     
     var searchFood = [String]()
     var searching = false
@@ -24,6 +23,7 @@ class SearchViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        // Testing
     }
     
     override func didReceiveMemoryWarning() {
