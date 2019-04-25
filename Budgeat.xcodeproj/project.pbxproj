@@ -14,8 +14,6 @@
 		927B680A227159B400382C6E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 927B6808227159B400382C6E /* Main.storyboard */; };
 		927B680C227159B600382C6E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 927B680B227159B600382C6E /* Assets.xcassets */; };
 		927B680F227159B600382C6E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 927B680D227159B600382C6E /* LaunchScreen.storyboard */; };
-		927B681A227159B600382C6E /* BudgeatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927B6819227159B600382C6E /* BudgeatTests.swift */; };
-		927B6825227159B600382C6E /* BudgeatUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927B6824227159B600382C6E /* BudgeatUITests.swift */; };
 		927B683322715F7E00382C6E /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927B683222715F7E00382C6E /* TodayViewController.swift */; };
 		927B683522715F8700382C6E /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927B683422715F8700382C6E /* SearchViewController.swift */; };
 		927B683722715F8C00382C6E /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927B683622715F8C00382C6E /* MapViewController.swift */; };
@@ -51,11 +49,7 @@
 		927B680E227159B600382C6E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		927B6810227159B600382C6E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		927B6815227159B600382C6E /* BudgeatTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BudgeatTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		927B6819227159B600382C6E /* BudgeatTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgeatTests.swift; sourceTree = "<group>"; };
-		927B681B227159B600382C6E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		927B6820227159B600382C6E /* BudgeatUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BudgeatUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		927B6824227159B600382C6E /* BudgeatUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgeatUITests.swift; sourceTree = "<group>"; };
-		927B6826227159B600382C6E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		927B683222715F7E00382C6E /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
 		927B683422715F8700382C6E /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		927B683622715F8C00382C6E /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
@@ -101,8 +95,6 @@
 			isa = PBXGroup;
 			children = (
 				927B6803227159B400382C6E /* Budgeat */,
-				927B6818227159B600382C6E /* BudgeatTests */,
-				927B6823227159B600382C6E /* BudgeatUITests */,
 				927B6802227159B400382C6E /* Products */,
 				4618CC562271B743008DC86B /* Frameworks */,
 			);
@@ -135,24 +127,6 @@
 				1E36D48E2271994D00C4C180 /* Locations.swift */,
 			);
 			path = Budgeat;
-			sourceTree = "<group>";
-		};
-		927B6818227159B600382C6E /* BudgeatTests */ = {
-			isa = PBXGroup;
-			children = (
-				927B6819227159B600382C6E /* BudgeatTests.swift */,
-				927B681B227159B600382C6E /* Info.plist */,
-			);
-			path = BudgeatTests;
-			sourceTree = "<group>";
-		};
-		927B6823227159B600382C6E /* BudgeatUITests */ = {
-			isa = PBXGroup;
-			children = (
-				927B6824227159B600382C6E /* BudgeatUITests.swift */,
-				927B6826227159B600382C6E /* Info.plist */,
-			);
-			path = BudgeatUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -301,7 +275,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				927B681A227159B600382C6E /* BudgeatTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -309,7 +282,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				927B6825227159B600382C6E /* BudgeatUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
