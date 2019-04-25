@@ -10,6 +10,8 @@
 		1E36D48D227198D200C4C180 /* LocationsMarkerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E36D48C227198D200C4C180 /* LocationsMarkerView.swift */; };
 		1E36D48F2271994D00C4C180 /* Locations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E36D48E2271994D00C4C180 /* Locations.swift */; };
 		4618CC582271B743008DC86B /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4618CC572271B743008DC86B /* CoreLocation.framework */; };
+		46665B122271ED4D00AB4914 /* MapData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46665B112271ED4D00AB4914 /* MapData.swift */; };
+		46665B152271EF0F00AB4914 /* FoodData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46665B142271EF0F00AB4914 /* FoodData.swift */; };
 		927B6805227159B400382C6E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927B6804227159B400382C6E /* AppDelegate.swift */; };
 		927B680A227159B400382C6E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 927B6808227159B400382C6E /* Main.storyboard */; };
 		927B680C227159B600382C6E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 927B680B227159B600382C6E /* Assets.xcassets */; };
@@ -42,6 +44,8 @@
 		1E36D48C227198D200C4C180 /* LocationsMarkerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsMarkerView.swift; sourceTree = "<group>"; };
 		1E36D48E2271994D00C4C180 /* Locations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Locations.swift; sourceTree = "<group>"; };
 		4618CC572271B743008DC86B /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		46665B112271ED4D00AB4914 /* MapData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapData.swift; sourceTree = "<group>"; };
+		46665B142271EF0F00AB4914 /* FoodData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodData.swift; sourceTree = "<group>"; };
 		927B6801227159B400382C6E /* Budgeat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Budgeat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		927B6804227159B400382C6E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		927B6809227159B400382C6E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -91,6 +95,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		46665B132271EED400AB4914 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				46665B112271ED4D00AB4914 /* MapData.swift */,
+				46665B142271EF0F00AB4914 /* FoodData.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
 		927B67F8227159B400382C6E = {
 			isa = PBXGroup;
 			children = (
@@ -113,6 +126,7 @@
 		927B6803227159B400382C6E /* Budgeat */ = {
 			isa = PBXGroup;
 			children = (
+				46665B132271EED400AB4914 /* Data */,
 				927B6838227169F700382C6E /* TableViewController.swift */,
 				927B683222715F7E00382C6E /* TodayViewController.swift */,
 				927B683422715F8700382C6E /* SearchViewController.swift */,
@@ -263,7 +277,9 @@
 				927B683522715F8700382C6E /* SearchViewController.swift in Sources */,
 				927B683322715F7E00382C6E /* TodayViewController.swift in Sources */,
 				1E36D48D227198D200C4C180 /* LocationsMarkerView.swift in Sources */,
+				46665B152271EF0F00AB4914 /* FoodData.swift in Sources */,
 				927B6805227159B400382C6E /* AppDelegate.swift in Sources */,
+				46665B122271ED4D00AB4914 /* MapData.swift in Sources */,
 				927B683D22717A6100382C6E /* FoodDetailViewController.swift in Sources */,
 				927B6839227169F700382C6E /* TableViewController.swift in Sources */,
 				1E36D48F2271994D00C4C180 /* Locations.swift in Sources */,

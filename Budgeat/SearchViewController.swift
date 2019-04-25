@@ -17,8 +17,6 @@ class SearchViewController: UIViewController {
     var searchFood = [String]()
     var searching = false
     
-    let foodData = ["Siomay", "Bakso", "Soto Daging", "Soto Mie", "Mie Goreng", "Gado Gado", "Bakso moza", "SioBak","Nasi goreng", "Nasi kuning","Nasi uduk", "Nasi Lemak", "Sate ayam","Sate Sapi","Thaican","Air minum","Ketoprak"]
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,7 +56,7 @@ extension SearchViewController: UITableViewDataSource, UITableViewDelegate{
         } else {
             cell?.textLabel?.text = foodData[indexPath.row]
         }
-        print("NEWWWcjusdhjd")
+        
         return cell!
     }
     
