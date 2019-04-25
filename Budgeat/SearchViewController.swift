@@ -43,6 +43,14 @@ class SearchViewController: UIViewController {
 }
 
 extension SearchViewController: UITableViewDataSource, UITableViewDelegate{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if searching{
+            return searchFood.count
+        }else{
+            return foodData.count
+        }
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell")
         if searching{
@@ -51,14 +59,6 @@ extension SearchViewController: UITableViewDataSource, UITableViewDelegate{
             cell?.textLabel?.text = foodData[indexPath.row]
         }
         return cell!
-    }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if searching{
-            return searchFood.count
-        }else{
-            return foodData.count
-        }
     }
     
 }

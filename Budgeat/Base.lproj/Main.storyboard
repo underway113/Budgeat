@@ -47,7 +47,7 @@
                                 </connections>
                             </tableView>
                             <searchBar contentMode="redraw" fixedFrame="YES" placeholder="Search food" translatesAutoresizingMaskIntoConstraints="NO" id="m9D-P4-IJ6">
-                                <rect key="frame" x="0.0" y="69" width="414" height="44"/>
+                                <rect key="frame" x="20" y="69" width="374" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
@@ -93,6 +93,9 @@
                         <viewLayoutGuide key="safeArea" id="1xw-jZ-ocb"/>
                     </view>
                     <tabBarItem key="tabBarItem" systemItem="downloads" id="LOm-6T-z9R"/>
+                    <connections>
+                        <outlet property="mapView" destination="0FS-8d-CXf" id="CHq-SW-HoL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AVp-8J-9ns" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

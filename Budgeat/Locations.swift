@@ -17,7 +17,7 @@ class Locations: NSObject, MKAnnotation {
     let coordinate : CLLocationCoordinate2D
     let image : UIImage
     
-    init(title : String ,locationName : String , locationDesc : String , type : String , coordinate : CLLocationCoordinate2D , image : UIImage , peakTime : UIImage) {
+    init(title : String ,locationName : String , locationDesc : String , coordinate : CLLocationCoordinate2D , image : UIImage) {
         self.title = title
         self.locationName = locationName
         self.locationDesc = locationDesc
