@@ -32,10 +32,14 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         // Initialize map
         mapView.register(LocationsMarkerView.self, forAnnotationViewWithReuseIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier)
         mapView.showsUserLocation = true
+        
         mapView.userTrackingMode = .follow
+        
         //mapView.delegate = self as? MKMapViewDelegate
         mapView.addAnnotations(locationsMark)
         
+        //Stop Location user, better battery life
+        locationManager.stopUpdatingLocation()
         
     }
     

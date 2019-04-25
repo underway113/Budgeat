@@ -85,12 +85,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="0FS-8d-CXf">
-                                <rect key="frame" x="20" y="44" width="374" height="769"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="0FS-8d-CXf">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="0FS-8d-CXf" firstAttribute="leading" secondItem="U1J-tr-o3Q" secondAttribute="leading" id="643-U6-rek"/>
+                            <constraint firstAttribute="trailing" secondItem="0FS-8d-CXf" secondAttribute="trailing" id="DyB-9o-aYa"/>
+                            <constraint firstItem="1xw-jZ-ocb" firstAttribute="bottom" secondItem="0FS-8d-CXf" secondAttribute="bottom" constant="-83" id="N07-5p-8rY"/>
+                            <constraint firstItem="0FS-8d-CXf" firstAttribute="top" secondItem="U1J-tr-o3Q" secondAttribute="top" id="vRu-h6-5Iw"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="1xw-jZ-ocb"/>
                     </view>
                     <tabBarItem key="tabBarItem" systemItem="downloads" id="LOm-6T-z9R"/>
