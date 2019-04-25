@@ -46,9 +46,8 @@
                                     <outlet property="delegate" destination="kJk-Lw-YPz" id="LVS-bN-HzA"/>
                                 </connections>
                             </tableView>
-                            <searchBar contentMode="redraw" fixedFrame="YES" placeholder="search" showsCancelButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sC1-iN-mdQ">
-                                <rect key="frame" x="20" y="69" width="374" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <searchBar contentMode="redraw" placeholder="search" showsCancelButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sC1-iN-mdQ">
+                                <rect key="frame" x="0.0" y="44" width="414" height="56"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <outlet property="delegate" destination="kJk-Lw-YPz" id="6ty-QL-Mym"/>
@@ -56,6 +55,11 @@
                             </searchBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="sC1-iN-mdQ" firstAttribute="leading" secondItem="xah-f1-uLb" secondAttribute="leading" id="Mdr-gn-e87"/>
+                            <constraint firstItem="xah-f1-uLb" firstAttribute="trailing" secondItem="sC1-iN-mdQ" secondAttribute="trailing" id="kBF-SI-d4o"/>
+                            <constraint firstItem="sC1-iN-mdQ" firstAttribute="top" secondItem="xah-f1-uLb" secondAttribute="top" id="tqf-iI-ptd"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="xah-f1-uLb"/>
                     </view>
                     <tabBarItem key="tabBarItem" systemItem="search" id="5Hc-dt-65o"/>
