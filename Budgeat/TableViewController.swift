@@ -10,38 +10,18 @@ import UIKit
 
 class TableViewController: UITableViewController {
 
-    @IBOutlet weak var foodImage01: UIImageView!
-    @IBOutlet weak var foodImage02: UIImageView!
-    @IBOutlet weak var foodImage03: UIImageView!
-    @IBOutlet weak var foodImage04: UIImageView!
+    
+    @IBOutlet var foodImages: [UIImageView]!
     
     var selectedImage:UIImage?
     
     @IBOutlet weak var foodOverlay: UIView!
     
-    @IBAction func tap01(_ sender: UITapGestureRecognizer) {
-        selectedImage = foodImage01.image
+    @IBAction func tap(_ sender: UITapGestureRecognizer) {
+        selectedImage = foodImages[sender.view?.tag ?? 0].image
         performSegue(withIdentifier: "foodDetail", sender: self)
     }
-    
-    @IBAction func tap02(_ sender: UITapGestureRecognizer) {
-        selectedImage = foodImage02.image
-        performSegue(withIdentifier: "foodDetail", sender: self)
 
-    }
-    
-    
-    @IBAction func tap03(_ sender: UITapGestureRecognizer) {
-        selectedImage = foodImage03.image
-        performSegue(withIdentifier: "foodDetail", sender: self)
-
-    }
-    
-    @IBAction func tap04(_ sender: UITapGestureRecognizer) {
-        selectedImage = foodImage04.image
-        performSegue(withIdentifier: "foodDetail", sender: self)
-
-    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let destination = segue.destination as! FoodDetailViewController
@@ -51,11 +31,10 @@ class TableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        foodImage01.layer.cornerRadius = 5
-        foodImage02.layer.cornerRadius = 5
-        foodImage03.layer.cornerRadius = 5
-        foodImage04.layer.cornerRadius = 5
-        foodOverlay.layer.cornerRadius = 5
+        for foodImage in foodImages {
+            foodImage.layer.cornerRadius = 6
+        }
+        foodOverlay.layer.cornerRadius = 6
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 

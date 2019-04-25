@@ -213,7 +213,7 @@
                                                     <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <gestureRecognizers/>
                                                 </imageView>
-                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="X87-bc-8GP">
+                                                <view tag="2" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="X87-bc-8GP">
                                                     <rect key="frame" x="20" y="19" width="334" height="435"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <subviews>
@@ -255,7 +255,7 @@
                                                     <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <gestureRecognizers/>
                                                 </imageView>
-                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hHM-c1-qvp">
+                                                <view tag="3" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hHM-c1-qvp">
                                                     <rect key="frame" x="20" y="19" width="334" height="435"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <subviews>
@@ -293,32 +293,32 @@
                         </connections>
                     </tableView>
                     <connections>
-                        <outlet property="foodImage01" destination="gy4-MZ-KD5" id="mWu-6h-S5S"/>
-                        <outlet property="foodImage02" destination="mwK-FQ-EZ5" id="tTX-VG-Afo"/>
-                        <outlet property="foodImage03" destination="kJz-Rc-qgR" id="jGI-bq-3DB"/>
-                        <outlet property="foodImage04" destination="kJz-Rc-qgR" id="BKu-rY-uIa"/>
                         <outlet property="foodOverlay" destination="WU0-fD-1y8" id="Tm8-qm-Urm"/>
+                        <outletCollection property="foodImages" destination="gy4-MZ-KD5" collectionClass="NSMutableArray" id="GoE-a3-f27"/>
+                        <outletCollection property="foodImages" destination="mwK-FQ-EZ5" collectionClass="NSMutableArray" id="4t8-Lm-0A4"/>
+                        <outletCollection property="foodImages" destination="kJz-Rc-qgR" collectionClass="NSMutableArray" id="QUA-A6-0cn"/>
+                        <outletCollection property="foodImages" destination="XcX-BS-9Lx" collectionClass="NSMutableArray" id="2vA-TY-lFQ"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dCh-Ll-Hu9" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="Yxb-sZ-aFS">
                     <connections>
-                        <action selector="tap01:" destination="xsE-L9-kub" id="N3O-Sj-8bl"/>
+                        <action selector="tap:" destination="xsE-L9-kub" id="Abd-jJ-Wz9"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="bpt-e1-OFv">
                     <connections>
-                        <action selector="tap02:" destination="xsE-L9-kub" id="l9M-c4-bgn"/>
+                        <action selector="tap:" destination="xsE-L9-kub" id="Ty4-RK-luP"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="TLu-4U-XvH">
                     <connections>
-                        <action selector="tap03:" destination="xsE-L9-kub" id="e8c-6e-SDa"/>
+                        <action selector="tap:" destination="xsE-L9-kub" id="5Sx-31-xVJ"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="Gbt-CC-jMo">
                     <connections>
-                        <action selector="tap04:" destination="xsE-L9-kub" id="x5A-RY-qCk"/>
+                        <action selector="tap:" destination="xsE-L9-kub" id="aZC-4t-ig8"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
@@ -388,7 +388,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" highlighted="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IY6-3B-m4T">
-                                        <rect key="frame" x="67" y="68" width="240" height="128"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="264"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                 </subviews>
