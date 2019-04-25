@@ -10,9 +10,10 @@ import UIKit
 
 class SearchViewController: UIViewController {
 
+    @IBOutlet weak var tabelSearch: UITableView!
     
     @IBOutlet weak var searchBar: UISearchBar!
-    @IBOutlet weak var tabelSearch: UITableView!
+    
     
     var searchFood = [String]()
     var searching = false
@@ -22,7 +23,6 @@ class SearchViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
     }
     
@@ -44,7 +44,7 @@ class SearchViewController: UIViewController {
 
 extension SearchViewController: UITableViewDataSource, UITableViewDelegate{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if searching{
+        if searching {
             return searchFood.count
         }else{
             return foodData.count
@@ -74,7 +74,7 @@ extension SearchViewController: UISearchBarDelegate{
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         searching = false
         searchBar.text = ""
-        //tabelSearch.reloadData()
-        //tes
-    }
+        tabelSearch.reloadData()
+        }
+    
 }
