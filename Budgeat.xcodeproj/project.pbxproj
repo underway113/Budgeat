@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1E36D48D227198D200C4C180 /* LocationsMarkerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E36D48C227198D200C4C180 /* LocationsMarkerView.swift */; };
 		1E36D48F2271994D00C4C180 /* Locations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E36D48E2271994D00C4C180 /* Locations.swift */; };
+		4617F98A2272EDF5000313C4 /* SearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4617F9892272EDF5000313C4 /* SearchCell.swift */; };
 		4618CC582271B743008DC86B /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4618CC572271B743008DC86B /* CoreLocation.framework */; };
 		46665B122271ED4D00AB4914 /* MapData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46665B112271ED4D00AB4914 /* MapData.swift */; };
 		46665B152271EF0F00AB4914 /* FoodData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46665B142271EF0F00AB4914 /* FoodData.swift */; };
@@ -48,6 +49,7 @@
 /* Begin PBXFileReference section */
 		1E36D48C227198D200C4C180 /* LocationsMarkerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsMarkerView.swift; sourceTree = "<group>"; };
 		1E36D48E2271994D00C4C180 /* Locations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Locations.swift; sourceTree = "<group>"; };
+		4617F9892272EDF5000313C4 /* SearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCell.swift; sourceTree = "<group>"; };
 		4618CC572271B743008DC86B /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		46665B112271ED4D00AB4914 /* MapData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapData.swift; sourceTree = "<group>"; };
 		46665B142271EF0F00AB4914 /* FoodData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodData.swift; sourceTree = "<group>"; };
@@ -159,6 +161,7 @@
 				927B683C22717A6100382C6E /* FoodDetailViewController.swift */,
 				927B680B227159B600382C6E /* Assets.xcassets */,
 				927B6808227159B400382C6E /* Main.storyboard */,
+				4617F9892272EDF5000313C4 /* SearchCell.swift */,
 				927B680D227159B600382C6E /* LaunchScreen.storyboard */,
 				927B6810227159B600382C6E /* Info.plist */,
 				1E36D48C227198D200C4C180 /* LocationsMarkerView.swift */,
@@ -298,6 +301,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				924CB60B2272BEBA00B776E1 /* Food.swift in Sources */,
+				4617F98A2272EDF5000313C4 /* SearchCell.swift in Sources */,
 				927B683522715F8700382C6E /* SearchViewController.swift in Sources */,
 				927B683322715F7E00382C6E /* TodayViewController.swift in Sources */,
 				1E36D48D227198D200C4C180 /* LocationsMarkerView.swift in Sources */,
