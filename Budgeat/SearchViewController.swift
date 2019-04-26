@@ -22,8 +22,15 @@ class SearchViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        searchBar.showsCancelButton = false
-        self.view.addGestureRecognizer(UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:))))
+        searchBar.showsCancelButton = true
+        
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
+        
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc func dismissKeyboard(){
+        view.endEditing(true)
     }
     
     override func didReceiveMemoryWarning() {
@@ -66,8 +73,11 @@ extension SearchViewController: UITableViewDataSource, UITableViewDelegate{
 
 extension SearchViewController: UISearchBarDelegate{
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        searchFood = foodData.filter({$0.lowercased().prefix(searchText.count) == searchText.lowercased()})
+        searchFood = foodData.filter({$0.lowercased().contains(searchText.lowercased())})
         searching = true
+        if searchBar.text == "" {
+            searching = false
+        }
         tabelSearch.reloadData()
     }
     

@@ -55,12 +55,16 @@
                             </searchBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="sC1-iN-mdQ" firstAttribute="leading" secondItem="xah-f1-uLb" secondAttribute="leading" id="Mdr-gn-e87"/>
                             <constraint firstItem="xah-f1-uLb" firstAttribute="trailing" secondItem="sC1-iN-mdQ" secondAttribute="trailing" id="kBF-SI-d4o"/>
                             <constraint firstItem="sC1-iN-mdQ" firstAttribute="top" secondItem="xah-f1-uLb" secondAttribute="top" id="tqf-iI-ptd"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="xah-f1-uLb"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="mfI-Yx-1MV" appends="YES" id="M0f-Y6-sSP"/>
+                        </connections>
                     </view>
                     <tabBarItem key="tabBarItem" systemItem="search" id="5Hc-dt-65o"/>
                     <connections>
@@ -70,6 +74,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z7e-Ha-j64" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="mfI-Yx-1MV">
+                    <connections>
+                        <outlet property="delegate" destination="kJk-Lw-YPz" id="E1W-OP-heH"/>
+                    </connections>
+                </tapGestureRecognizer>
                 <searchDisplayController id="hhQ-fy-d9w">
                     <connections>
                         <outlet property="delegate" destination="kJk-Lw-YPz" id="yXF-Mv-r2B"/>
