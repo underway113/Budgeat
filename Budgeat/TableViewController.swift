@@ -13,12 +13,17 @@ class TableViewController: UITableViewController {
     
     @IBOutlet var foodImages: [UIImageView]!
     
+
+    @IBOutlet var foodOverlays: [UIView]!
+    
+    
+
     var selectedImage:UIImage?
     var selectedCategory:String?
     var selectedPrice:String?
     var categories = ["Siomay" , "Daging" , "Laut"]
     var prices = ["1000" , "2000" , "300"]
-    @IBOutlet weak var foodOverlay: UIView!
+    
     
     @IBAction func tap(_ sender: UITapGestureRecognizer) {
         selectedImage = foodImages[sender.view?.tag ?? 0].image
@@ -40,10 +45,12 @@ class TableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        for foodOverlay in foodOverlays {
+            foodOverlay.layer.cornerRadius = 6
+        }
         for foodImage in foodImages {
             foodImage.layer.cornerRadius = 6
         }
-        foodOverlay.layer.cornerRadius = 6
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 

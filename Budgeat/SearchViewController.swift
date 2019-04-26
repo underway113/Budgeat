@@ -21,10 +21,11 @@ class SearchViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        searchBar.searchBarStyle = UISearchBar.Style.minimal
+        searchBar.placeholder = " Search..."
+        searchBar.showsCancelButton = false
         
-        searchBar.showsCancelButton = true
-        
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
         
         view.addGestureRecognizer(tap)
     }
