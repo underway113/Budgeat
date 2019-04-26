@@ -16,10 +16,23 @@ class SearchViewController: UIViewController {
     
     var searchFood = [String]()
     var searching = false
+    var foodData:[String] = []
     
     
+    func loadFoodData() {
+        for restaurant in zone_GOP.restaurants {
+            for food in restaurant.foods {
+                if !foodData.contains(food.name) {
+                    foodData.append(food.name)
+                }
+            }
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        loadFoodData()
+        
         // Do any additional setup after loading the view.
         
         searchBar.showsCancelButton = true
@@ -54,6 +67,7 @@ extension SearchViewController: UITableViewDataSource, UITableViewDelegate{
         if searching {
             return searchFood.count
         } else {
+            // Get total food in the data class
             return foodData.count
         }
     }
@@ -63,6 +77,7 @@ extension SearchViewController: UITableViewDataSource, UITableViewDelegate{
         if searching{
             cell?.textLabel?.text = searchFood[indexPath.row]
         } else {
+
             cell?.textLabel?.text = foodData[indexPath.row]
         }
         
