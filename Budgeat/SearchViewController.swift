@@ -14,16 +14,16 @@ class SearchViewController: UIViewController {
     
     @IBOutlet weak var searchBar: UISearchBar!
     
-    var searchFood = [String]()
+    var searchFood = [Food]()
     var searching = false
-    var foodData:[String] = []
+    var foodData:[Food] = []
     
     
     func loadFoodData() {
         for restaurant in zone_GOP.restaurants {
             for food in restaurant.foods {
-                if !foodData.contains(food.name) {
-                    foodData.append(food.name)
+                if !foodData.contains(where: {$0.name == food.name}) {
+                    foodData.append(food)
                 }
             }
         }
@@ -36,7 +36,7 @@ class SearchViewController: UIViewController {
         // Do any additional setup after loading the view.
         searchBar.searchBarStyle = UISearchBar.Style.minimal
         searchBar.placeholder = " Search..."
-        searchBar.showsCancelButton = false
+        searchBar.showsCancelButton = true
         
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
         
@@ -74,22 +74,23 @@ extension SearchViewController: UITableViewDataSource, UITableViewDelegate{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell")
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! SearchCell
         if searching{
-            cell?.textLabel?.text = searchFood[indexPath.row]
+            cell.lblFoodName.text = searchFood[indexPath.row].name
+            cell.imageFood.image = searchFood[indexPath.row].image
         } else {
-
-            cell?.textLabel?.text = foodData[indexPath.row]
+            cell.lblFoodName.text = foodData[indexPath.row].name
+            cell.imageFood.image = foodData[indexPath.row].image
         }
-        
-        return cell!
+        tableView.rowHeight = 94
+        return cell
     }
     
 }
 
 extension SearchViewController: UISearchBarDelegate{
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        searchFood = foodData.filter({$0.lowercased().contains(searchText.lowercased())})
+        searchFood = foodData.filter({$0.name.lowercased().contains(searchText.lowercased())})
         searching = true
         if searchBar.text == "" {
             searching = false

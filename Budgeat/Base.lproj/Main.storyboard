@@ -23,22 +23,31 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" textLabel="bbY-8m-bCi" style="IBUITableViewCellStyleDefault" id="meT-IP-A7i">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                    <tableViewCell contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="94" id="meT-IP-A7i" customClass="SearchCell" customModule="Budgeat" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="94"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="meT-IP-A7i" id="XQW-20-Cpi">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="93.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="bbY-8m-bCi">
-                                                    <rect key="frame" x="20" y="0.0" width="374" height="43.5"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rue-aP-afv">
+                                                    <rect key="frame" x="20" y="5" width="128" height="82"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JcS-pm-ReZ">
+                                                    <rect key="frame" x="169" y="23" width="181" height="47"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="imageFood" destination="rue-aP-afv" id="34X-OV-erP"/>
+                                            <outlet property="lblFoodName" destination="JcS-pm-ReZ" id="DD9-ve-LWK"/>
+                                            <segue destination="n4B-PH-Nwf" kind="show" identifier="searchFoodToDetail" id="22Q-Lq-1Sc"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -46,8 +55,8 @@
                                     <outlet property="delegate" destination="kJk-Lw-YPz" id="LVS-bN-HzA"/>
                                 </connections>
                             </tableView>
-                            <searchBar contentMode="redraw" placeholder="search" showsCancelButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sC1-iN-mdQ">
-                                <rect key="frame" x="0.0" y="44" width="414" height="56"/>
+                            <searchBar contentMode="redraw" misplaced="YES" placeholder="search" showsCancelButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sC1-iN-mdQ">
+                                <rect key="frame" x="20" y="44" width="374" height="56"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <outlet property="delegate" destination="kJk-Lw-YPz" id="6ty-QL-Mym"/>
@@ -452,7 +461,7 @@
             <objects>
                 <viewController id="n4B-PH-Nwf" customClass="FoodDetailViewController" customModule="Budgeat" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8P6-uZ-TmN">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" highlighted="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IY6-3B-m4T">
@@ -567,4 +576,7 @@
         <image name="food3" width="500" height="454"/>
         <image name="food4" width="3200" height="2400"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="22Q-Lq-1Sc"/>
+    </inferredMetricsTieBreakers>
 </document>
