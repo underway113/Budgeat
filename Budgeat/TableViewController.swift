@@ -34,8 +34,6 @@ class TableViewController: UITableViewController {
         destination.receivedCategory = selectedCategory
         destination.receivedPrice = selectedPrice
         
-        
-        
     }
     
     override func viewDidLoad() {
