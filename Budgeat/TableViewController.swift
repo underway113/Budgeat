@@ -16,29 +16,14 @@ class TableViewController: UITableViewController {
 
     @IBOutlet var foodOverlays: [UIView]!
     
-    
-
-    var selectedImage:UIImage?
-    var selectedCategory:String?
-    var selectedPrice:String?
     var categories = ["Siomay" , "Daging" , "Laut"]
     var prices = ["1000" , "2000" , "300"]
     
     
     @IBAction func tap(_ sender: UITapGestureRecognizer) {
-        selectedImage = foodImages[sender.view?.tag ?? 0].image
-        selectedCategory = categories[sender.view?.tag ?? 0]
-        selectedPrice = prices[sender.view?.tag ?? 0]
+        selectedPic = foodImages[sender.view?.tag ?? 0].image
+        selectedName = categories[sender.view?.tag ?? 0]
         performSegue(withIdentifier: "foodDetail", sender: self)
-    }
-
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let destination = segue.destination as! FoodDetailViewController
-        destination.receivedImage = selectedImage
-        destination.receivedCategory = selectedCategory
-        destination.receivedPrice = selectedPrice
-        
     }
     
     override func viewDidLoad() {

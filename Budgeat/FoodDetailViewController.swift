@@ -22,39 +22,34 @@ class FoodDetailViewController: UIViewController {
     
     @IBOutlet weak var foodDetailImage: UIImageView!
     
-    var receivedImage:UIImage?
-    var receivedCategory:String?
-    var receivedPrice:String?
-    var intReceivedPrice:Int?
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        categoryLabel.text = receivedCategory!
-        priceLabel.text = "Rp." + receivedPrice!
-        foodDetailImage.image = receivedImage!
+        categoryLabel.text = selectedName
+       // priceLabel.text = "Rp." + receivedPrice!
+        foodDetailImage.image = selectedPic
         
-        if Int(receivedPrice!) == nil {
-            intReceivedPrice = 0
-        }
-        else {
-            intReceivedPrice = Int(receivedPrice!)
-        }
-        
-        switch intReceivedPrice {
-        case _ where intReceivedPrice! > 0 && intReceivedPrice! <= 20_000:
-            dollarLabel.text = "$"
-            dollarLabel.textColor = UIColor(red: 0.15, green: 0.9, blue: 0.2, alpha: 1)
-        case _ where intReceivedPrice! > 20_000 && intReceivedPrice! <= 40_000:
-            dollarLabel.text = "$$"
-            dollarLabel.textColor = UIColor(red: 0.6, green: 0.4, blue: 0.4, alpha: 1)
-        case _ where intReceivedPrice! > 40_000:
-            dollarLabel.text = "$$$"
-            dollarLabel.textColor = UIColor(red: 1, green: 0.1, blue: 0.05, alpha: 1)
-        default:
-            dollarLabel.text = "!"
-            dollarLabel.textColor = UIColor(red: 20, green: 20, blue: 20, alpha: 0.1)
-        }
+//        if Int(receivedPrice!) == nil {
+//            intReceivedPrice = 0
+//        }
+//        else {
+//            intReceivedPrice = Int(receivedPrice!)
+//        }
+//
+//        switch intReceivedPrice {
+//        case _ where intReceivedPrice! > 0 && intReceivedPrice! <= 20_000:
+//            dollarLabel.text = "$"
+//            dollarLabel.textColor = UIColor(red: 0.15, green: 0.9, blue: 0.2, alpha: 1)
+//        case _ where intReceivedPrice! > 20_000 && intReceivedPrice! <= 40_000:
+//            dollarLabel.text = "$$"
+//            dollarLabel.textColor = UIColor(red: 0.6, green: 0.4, blue: 0.4, alpha: 1)
+//        case _ where intReceivedPrice! > 40_000:
+//            dollarLabel.text = "$$$"
+//            dollarLabel.textColor = UIColor(red: 1, green: 0.1, blue: 0.05, alpha: 1)
+//        default:
+//            dollarLabel.text = "!"
+//            dollarLabel.textColor = UIColor(red: 20, green: 20, blue: 20, alpha: 0.1)
+//        }
 
         // Do any additional setup after loading the view.
     }

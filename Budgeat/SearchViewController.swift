@@ -41,6 +41,14 @@ class SearchViewController: UIViewController {
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
         
         view.addGestureRecognizer(tap)
+        
+        let tapDetail = UITapGestureRecognizer(target: self, action: #selector(tapDetailSegue
+            ))
+        tabelSearch.addGestureRecognizer(tapDetail)
+    }
+    
+    @objc func tapDetailSegue() {
+       performSegue(withIdentifier: "searchFoodToDetail", sender: self)
     }
     
     @objc func dismissKeyboard(){
@@ -60,7 +68,6 @@ class SearchViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
 }
 
 extension SearchViewController: UITableViewDataSource, UITableViewDelegate{
@@ -85,7 +92,7 @@ extension SearchViewController: UITableViewDataSource, UITableViewDelegate{
         tableView.rowHeight = 94
         return cell
     }
-    
+
 }
 
 extension SearchViewController: UISearchBarDelegate{
