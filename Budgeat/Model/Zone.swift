@@ -10,12 +10,23 @@ import Foundation
 import UIKit
 
 class Zone {
-    var name:String?
-    var description:String?
-    var restaurants:[Restaurant]?
-    var priceRange:Int?
-    var latitude:Double?
-    var longtitude:Double?
-    var image:UIImage?
-    var distance:Double?
+    var name:String
+    var description:String
+    var restaurants:[Restaurant]
+    var priceRange:Int
+    var latitude:Double
+    var longtitude:Double
+    var image:UIImage
+    var distance:Double
+    
+    init(name:String, description:String, restaurants:[Restaurant], priceRange:Int, latitude:Double, longtitude:Double, image:UIImage, distance:Double) {
+        self.name = name
+        self.description = description
+        self.restaurants = restaurants
+        self.priceRange = priceRange
+        self.latitude = latitude
+        self.longtitude = longtitude
+        self.image = image
+        self.distance = distance
+    }
 }

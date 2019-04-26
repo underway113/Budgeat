@@ -10,8 +10,15 @@ import Foundation
 import UIKit
 
 class Food {
-    var name:String?
-    var description:String?
-    var price:Int?
-    var image:UIImage?
+    var name:String
+    var description:String
+    var price:Int
+    var image:UIImage
+    
+    init(name:String, description:String, price:Int, image:UIImage) {
+        self.name = name
+        self.description = description
+        self.price = price
+        self.image = image
+    }
 }
