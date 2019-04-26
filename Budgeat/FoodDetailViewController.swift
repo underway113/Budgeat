@@ -14,6 +14,8 @@ class FoodDetailViewController: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     
+    // Test
+    
     @IBOutlet weak var categoryLabel: UILabel!
     
     @IBOutlet weak var priceLabel: UILabel!
