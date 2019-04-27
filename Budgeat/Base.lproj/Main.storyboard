@@ -97,7 +97,7 @@
                     </connections>
                 </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="1537.68115942029" y="375.66964285714283"/>
+            <point key="canvasLocation" x="1954" y="-440"/>
         </scene>
         <!--Search2 View Controller-->
         <scene sceneID="Txo-j5-1eW">
@@ -183,7 +183,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qGz-tx-nkl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2616" y="567"/>
+            <point key="canvasLocation" x="1261" y="183"/>
         </scene>
         <!--Map View Controller-->
         <scene sceneID="MHG-oN-WxF">
@@ -213,7 +213,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AVp-8J-9ns" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1537.68115942029" y="1205.3571428571429"/>
+            <point key="canvasLocation" x="1261" y="948"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="bev-O0-T1f">
@@ -486,7 +486,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1518.840579710145" y="-1063.3928571428571"/>
+            <point key="canvasLocation" x="2568" y="-1010"/>
         </scene>
         <!--Today View Controller-->
         <scene sceneID="6b2-Ko-iDX">
@@ -540,7 +540,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="usb-uI-4kD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1537.68115942029" y="-354.24107142857139"/>
+            <point key="canvasLocation" x="1091" y="-741"/>
         </scene>
         <!--Food Detail View Controller-->
         <scene sceneID="Crf-5U-mtI">
@@ -663,6 +663,6 @@
         <image name="food4" width="3200" height="2400"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="mKD-ab-qIq"/>
+        <segue reference="22Q-Lq-1Sc"/>
     </inferredMetricsTieBreakers>
 </document>
