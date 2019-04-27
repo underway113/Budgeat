@@ -12,8 +12,6 @@ class TableViewController: UITableViewController {
 
     
     @IBOutlet var foodImages: [UIImageView]!
-    
-
     @IBOutlet var foodOverlays: [UIView]!
     
     var categories = ["Siomay" , "Daging" , "Laut"]
@@ -21,8 +19,10 @@ class TableViewController: UITableViewController {
     
     
     @IBAction func tap(_ sender: UITapGestureRecognizer) {
+        
         selectedPic = foodImages[sender.view?.tag ?? 0].image
         selectedName = categories[sender.view?.tag ?? 0]
+        
         performSegue(withIdentifier: "foodDetail", sender: self)
     }
     

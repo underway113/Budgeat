@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 
+var selectedId:Int?
 var selectedName:String?
 var selectedPic:UIImage?
 

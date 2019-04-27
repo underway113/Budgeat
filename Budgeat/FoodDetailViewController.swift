@@ -22,12 +22,19 @@ class FoodDetailViewController: UIViewController {
     
     @IBOutlet weak var foodDetailImage: UIImageView!
     
+    var passedData:Food?
+    var foodName:String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+//        print("Passed Data = " + passedData?.name)
+        categoryLabel.text = passedData?.name
+        foodDetailImage.image = passedData?.image
+        priceLabel.text = "\(passedData?.price ?? 0)"
         
-        categoryLabel.text = selectedName
+//        categoryLabel.text = selectedName
        // priceLabel.text = "Rp." + receivedPrice!
-        foodDetailImage.image = selectedPic
+//        foodDetailImage.image = selectedPic
         
 //        if Int(receivedPrice!) == nil {
 //            intReceivedPrice = 0

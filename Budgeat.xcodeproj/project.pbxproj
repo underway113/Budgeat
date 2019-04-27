@@ -13,6 +13,8 @@
 		4618CC582271B743008DC86B /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4618CC572271B743008DC86B /* CoreLocation.framework */; };
 		46665B122271ED4D00AB4914 /* MapData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46665B112271ED4D00AB4914 /* MapData.swift */; };
 		46665B152271EF0F00AB4914 /* FoodData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46665B142271EF0F00AB4914 /* FoodData.swift */; };
+		469FFD442274B331004276B8 /* Search2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469FFD432274B331004276B8 /* Search2ViewController.swift */; };
+		469FFD462274B7B7004276B8 /* Search2TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469FFD452274B7B7004276B8 /* Search2TableViewCell.swift */; };
 		924CB60B2272BEBA00B776E1 /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924CB60A2272BEBA00B776E1 /* Food.swift */; };
 		924CB60D2272BED000B776E1 /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924CB60C2272BED000B776E1 /* Restaurant.swift */; };
 		924CB60F2272BEF900B776E1 /* Zone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924CB60E2272BEF900B776E1 /* Zone.swift */; };
@@ -54,6 +56,8 @@
 		4618CC572271B743008DC86B /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		46665B112271ED4D00AB4914 /* MapData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapData.swift; sourceTree = "<group>"; };
 		46665B142271EF0F00AB4914 /* FoodData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodData.swift; sourceTree = "<group>"; };
+		469FFD432274B331004276B8 /* Search2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Search2ViewController.swift; sourceTree = "<group>"; };
+		469FFD452274B7B7004276B8 /* Search2TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Search2TableViewCell.swift; sourceTree = "<group>"; };
 		924CB60A2272BEBA00B776E1 /* Food.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
 		924CB60C2272BED000B776E1 /* Restaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
 		924CB60E2272BEF900B776E1 /* Zone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Zone.swift; sourceTree = "<group>"; };
@@ -168,6 +172,8 @@
 				927B680D227159B600382C6E /* LaunchScreen.storyboard */,
 				927B6810227159B600382C6E /* Info.plist */,
 				1E36D48C227198D200C4C180 /* LocationsMarkerView.swift */,
+				469FFD432274B331004276B8 /* Search2ViewController.swift */,
+				469FFD452274B7B7004276B8 /* Search2TableViewCell.swift */,
 			);
 			path = Budgeat;
 			sourceTree = "<group>";
@@ -310,6 +316,7 @@
 				927B683322715F7E00382C6E /* TodayViewController.swift in Sources */,
 				1E36D48D227198D200C4C180 /* LocationsMarkerView.swift in Sources */,
 				46665B152271EF0F00AB4914 /* FoodData.swift in Sources */,
+				469FFD442274B331004276B8 /* Search2ViewController.swift in Sources */,
 				927B6805227159B400382C6E /* AppDelegate.swift in Sources */,
 				46665B122271ED4D00AB4914 /* MapData.swift in Sources */,
 				927B683D22717A6100382C6E /* FoodDetailViewController.swift in Sources */,
@@ -317,6 +324,7 @@
 				927B6839227169F700382C6E /* TableViewController.swift in Sources */,
 				1E36D48F2271994D00C4C180 /* Locations.swift in Sources */,
 				924CB6132272C15700B776E1 /* RestaurantData.swift in Sources */,
+				469FFD462274B7B7004276B8 /* Search2TableViewCell.swift in Sources */,
 				927B683722715F8C00382C6E /* MapViewController.swift in Sources */,
 				924CB60F2272BEF900B776E1 /* Zone.swift in Sources */,
 				924CB6112272C11500B776E1 /* ZoneData.swift in Sources */,
