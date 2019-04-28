@@ -56,7 +56,7 @@ class Search2ViewController: UIViewController, UITableViewDataSource, UITableVie
             cell.imageCell.image = foodData2[indexPath.row].image
         }
         
-        tableView.rowHeight = 94
+        tableView.rowHeight = 110
         return cell
     }
     

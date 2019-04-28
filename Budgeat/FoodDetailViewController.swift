@@ -10,10 +10,9 @@ import UIKit
 
 class FoodDetailViewController: UIViewController {
     
-    @IBAction func returnButton(_ sender: Any) {
+    @IBAction func backButtonPressed(_ sender: UIButton) {
         dismissCustom()
     }
-    
     func dismissCustom() {
         let transition: CATransition = CATransition()
         transition.duration = 0.2
@@ -42,8 +41,6 @@ class FoodDetailViewController: UIViewController {
         let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(handleGesture))
         swipeRight.direction = .right
         self.view.addGestureRecognizer(swipeRight)
-        
-        
         
         //        print("Passed Data = " + passedData?.name)
         categoryLabel.text = passedData?.name
@@ -78,6 +75,7 @@ class FoodDetailViewController: UIViewController {
         
         // Do any additional setup after loading the view.
     }
+    
     
     @objc func handleGesture(gesture: UISwipeGestureRecognizer) -> Void {
         dismissCustom()
