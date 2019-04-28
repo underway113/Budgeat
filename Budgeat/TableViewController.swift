@@ -14,9 +14,26 @@ class TableViewController: UITableViewController {
     @IBOutlet var foodImages: [UIImageView]!
     @IBOutlet var foodOverlays: [UIView]!
     
-    var categories = ["Siomay" , "Daging" , "Laut"]
-    var prices = ["1000" , "2000" , "300"]
+    @IBOutlet var todayTable: UITableView!
     
+    //    var categories = ["Siomay" , "Daging" , "Laut"]
+//    var prices = ["1000" , "2000" , "300"]
+    var categories:[String] = []
+    var restaurants:[Restaurant] = []
+    var iterator = 0
+    
+    func loadFoodRestaurantData() {
+        for restaurant in zone_GOP.restaurants {
+            for food in restaurant.foods {
+                if !categories.contains(food.name) {
+                    categories.append(food.name)
+                    print(categories)
+                    break
+                }
+            }
+            restaurants.append(restaurant)
+        }
+    }
     
     @IBAction func tap(_ sender: UITapGestureRecognizer) {
         
@@ -28,6 +45,9 @@ class TableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        loadFoodRestaurantData()
+        
         for foodOverlay in foodOverlays {
             foodOverlay.layer.cornerRadius = 6
         }
@@ -53,15 +73,16 @@ class TableViewController: UITableViewController {
         return 4
     }
 
-    /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
+        tableView.register(TodayCell.self, forCellReuseIdentifier: "tableContentTemplate")
+        let cell = tableView.dequeueReusableCell(withIdentifier: "tableContentTemplate", for: indexPath) as! TodayCell
+        cell.foodName.text = categories[iterator]
+        cell.foodDetail.text = restaurants[iterator].name
+        
+        iterator += 1
 
         return cell
     }
-    */
 
     /*
     // Override to support conditional editing of the table view.
@@ -109,3 +130,5 @@ class TableViewController: UITableViewController {
     */
 
 }
+
+

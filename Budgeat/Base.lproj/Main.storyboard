@@ -135,7 +135,7 @@
                         <sections>
                             <tableViewSection id="KwT-lD-uQI">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="tableContent" rowHeight="500" id="Kdd-Kn-P6w">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="tableContentTemplate" rowHeight="500" id="Kdd-Kn-P6w" customClass="TodayCell" customModule="Budgeat" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="500"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Kdd-Kn-P6w" id="s94-wE-lt9">
@@ -193,6 +193,8 @@
                                         </tableViewCellContentView>
                                         <gestureRecognizers/>
                                         <connections>
+                                            <outlet property="foodDetail" destination="EhU-Za-Kd2" id="OiI-Wa-Ii9"/>
+                                            <outlet property="foodName" destination="cNm-RE-cC7" id="8XS-Iw-iXk"/>
                                             <segue destination="n4B-PH-Nwf" kind="show" identifier="foodDetail" id="wnx-W5-YxD"/>
                                         </connections>
                                     </tableViewCell>
@@ -380,6 +382,8 @@
                         </connections>
                     </tableView>
                     <connections>
+                        <outlet property="tableView" destination="E7h-FN-dyS" id="l58-bC-7Ij"/>
+                        <outlet property="todayTable" destination="E7h-FN-dyS" id="Jis-de-Igo"/>
                         <outletCollection property="foodImages" destination="gy4-MZ-KD5" collectionClass="NSMutableArray" id="GoE-a3-f27"/>
                         <outletCollection property="foodImages" destination="mwK-FQ-EZ5" collectionClass="NSMutableArray" id="4t8-Lm-0A4"/>
                         <outletCollection property="foodImages" destination="kJz-Rc-qgR" collectionClass="NSMutableArray" id="QUA-A6-0cn"/>
@@ -473,7 +477,7 @@
             <objects>
                 <viewController id="n4B-PH-Nwf" customClass="FoodDetailViewController" customModule="Budgeat" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8P6-uZ-TmN">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.75" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Pd8-ap-vkY">
@@ -544,7 +548,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4z0-IQ-GdJ">
-                                <rect key="frame" x="0.0" y="310" width="414" height="586"/>
+                                <rect key="frame" x="0.0" y="310" width="414" height="357"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="List places cheap to expensive + distance" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r2q-hf-ENE">
                                         <rect key="frame" x="28" y="89" width="319" height="21"/>
@@ -615,6 +619,6 @@
         <image name="food4" width="3200" height="2400"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="mKD-ab-qIq"/>
+        <segue reference="wnx-W5-YxD"/>
     </inferredMetricsTieBreakers>
 </document>

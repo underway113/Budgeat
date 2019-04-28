@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E34ED472275FBF6003D3CB5 /* TodayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E34ED462275FBF6003D3CB5 /* TodayCell.swift */; };
 		1E36D48D227198D200C4C180 /* LocationsMarkerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E36D48C227198D200C4C180 /* LocationsMarkerView.swift */; };
 		1E36D48F2271994D00C4C180 /* Locations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E36D48E2271994D00C4C180 /* Locations.swift */; };
 		4617F98A2272EDF5000313C4 /* SearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4617F9892272EDF5000313C4 /* SearchCell.swift */; };
@@ -50,6 +51,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1E34ED462275FBF6003D3CB5 /* TodayCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayCell.swift; sourceTree = "<group>"; };
 		1E36D48C227198D200C4C180 /* LocationsMarkerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsMarkerView.swift; sourceTree = "<group>"; };
 		1E36D48E2271994D00C4C180 /* Locations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Locations.swift; sourceTree = "<group>"; };
 		4617F9892272EDF5000313C4 /* SearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCell.swift; sourceTree = "<group>"; };
@@ -174,6 +176,7 @@
 				469FFD432274B331004276B8 /* Search2ViewController.swift */,
 				469FFD452274B7B7004276B8 /* Search2TableViewCell.swift */,
 				469FFD47227583B2004276B8 /* LaunchScreen2.storyboard */,
+				1E34ED462275FBF6003D3CB5 /* TodayCell.swift */,
 			);
 			path = Budgeat;
 			sourceTree = "<group>";
@@ -320,6 +323,7 @@
 				927B6805227159B400382C6E /* AppDelegate.swift in Sources */,
 				46665B122271ED4D00AB4914 /* MapData.swift in Sources */,
 				927B683D22717A6100382C6E /* FoodDetailViewController.swift in Sources */,
+				1E34ED472275FBF6003D3CB5 /* TodayCell.swift in Sources */,
 				924CB60D2272BED000B776E1 /* Restaurant.swift in Sources */,
 				927B6839227169F700382C6E /* TableViewController.swift in Sources */,
 				1E36D48F2271994D00C4C180 /* Locations.swift in Sources */,
