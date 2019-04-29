@@ -94,7 +94,7 @@
             </objects>
             <point key="canvasLocation" x="1260.8695652173915" y="182.8125"/>
         </scene>
-        <!--Map View Controller-->
+        <!--Map-->
         <scene sceneID="MHG-oN-WxF">
             <objects>
                 <viewController id="QxX-72-tCH" customClass="MapViewController" customModule="Budgeat" customModuleProvider="target" sceneMemberID="viewController">
@@ -115,7 +115,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="1xw-jZ-ocb"/>
                     </view>
-                    <tabBarItem key="tabBarItem" systemItem="downloads" id="LOm-6T-z9R"/>
+                    <tabBarItem key="tabBarItem" title="Map" image="mapIcon" id="LOm-6T-z9R"/>
                     <connections>
                         <outlet property="mapView" destination="0FS-8d-CXf" id="CHq-SW-HoL"/>
                     </connections>
@@ -345,7 +345,7 @@
                                 <rect key="frame" x="0.0" y="310" width="414" height="357"/>
                                 <subviews>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="pzC-Mm-nQT">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="544"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="315"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="restaurantCell" textLabel="yOI-iI-M9t" detailTextLabel="mMR-3A-YLd" rowHeight="127" style="IBUITableViewCellStyleValue1" id="OE4-Ln-ngO">
@@ -441,6 +441,7 @@
     <resources>
         <image name="backIcon" width="50" height="50"/>
         <image name="food1" width="940" height="529"/>
+        <image name="mapIcon" width="28" height="28"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="dV5-Cx-tXJ"/>
