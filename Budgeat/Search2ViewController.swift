@@ -23,18 +23,22 @@ class Search2ViewController: UIViewController, UITableViewDataSource, UITableVie
     //START SEARCH BAR
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         print(searchText)
-        searchFood2 = foodData2.filter({$0.name.lowercased().contains(searchText.lowercased())})
+        searchFood2 = foodData2.filter({$0.name.lowercased().contains(searchText.lowercased())
+            || $0.tag.lowercased().contains(searchText.lowercased())
+        })
         searching2 = true
         
         
+//        scrollToFirstRow()
         if searchBar.text == "" {
             searching2 = false
         }
         else {
-            scrollToFirstRow()
+            resultTableView.scrollsToTop = true
         }
         
         resultTableView.reloadData()
+        
     }
     
     //END SEARCH BAR

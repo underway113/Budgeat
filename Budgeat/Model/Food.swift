@@ -14,11 +14,13 @@ class Food {
     var description:String
     var price:Int
     var image:UIImage
+    var tag:String
     
-    init(name:String, description:String, price:Int, image:UIImage) {
+    init(name:String, description:String, price:Int, image:UIImage, tag:String) {
         self.name = name
         self.description = description
         self.price = price
         self.image = image
+        self.tag = tag
     }
 }
