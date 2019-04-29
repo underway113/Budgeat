@@ -546,15 +546,48 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4z0-IQ-GdJ">
                                 <rect key="frame" x="0.0" y="310" width="414" height="586"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="List places cheap to expensive + distance" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r2q-hf-ENE">
-                                        <rect key="frame" x="28" y="89" width="319" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="pzC-Mm-nQT">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="544"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <prototypes>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="restaurantCell" textLabel="yOI-iI-M9t" detailTextLabel="mMR-3A-YLd" rowHeight="127" style="IBUITableViewCellStyleValue1" id="OE4-Ln-ngO">
+                                                <rect key="frame" x="0.0" y="28" width="414" height="127"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="OE4-Ln-ngO" id="laA-hY-mjM">
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="126.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="MenuName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="yOI-iI-M9t">
+                                                            <rect key="frame" x="20" y="53" width="88" height="20.5"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Price" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="mMR-3A-YLd">
+                                                            <rect key="frame" x="355" y="53" width="39" height="20.5"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </tableViewCellContentView>
+                                            </tableViewCell>
+                                        </prototypes>
+                                        <connections>
+                                            <outlet property="dataSource" destination="n4B-PH-Nwf" id="dmS-9t-J1T"/>
+                                            <outlet property="delegate" destination="n4B-PH-Nwf" id="lz5-YY-2NR"/>
+                                        </connections>
+                                    </tableView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="pzC-Mm-nQT" secondAttribute="bottom" constant="42" id="Vlf-Gx-VjV"/>
+                                    <constraint firstItem="pzC-Mm-nQT" firstAttribute="leading" secondItem="4z0-IQ-GdJ" secondAttribute="leading" id="dGL-VV-Jc0"/>
+                                    <constraint firstItem="pzC-Mm-nQT" firstAttribute="top" secondItem="4z0-IQ-GdJ" secondAttribute="top" id="guE-iG-HgW"/>
+                                    <constraint firstAttribute="trailing" secondItem="pzC-Mm-nQT" secondAttribute="trailing" id="jLg-Ir-dg2"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -585,7 +618,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5i5-V9-j2C" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3453.6231884057975" y="-354.57589285714283"/>
+            <point key="canvasLocation" x="3453.6231884057975" y="-354.91071428571428"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="UqU-l8-gwg">

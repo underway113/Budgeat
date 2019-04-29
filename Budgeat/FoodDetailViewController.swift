@@ -13,6 +13,7 @@ class FoodDetailViewController: UIViewController {
     @IBAction func backButtonPressed(_ sender: UIButton) {
         dismissCustom()
     }
+    
     func dismissCustom() {
         let transition: CATransition = CATransition()
         transition.duration = 0.2
@@ -33,10 +34,25 @@ class FoodDetailViewController: UIViewController {
     
     var passedData:Food?
     var foodName:String?
+    //var foodPrice: Int
+    var restaurantList:[(rest :Restaurant, food : Food)] = []
+    
+    func loadRestaurantList(){
+        for restaurant in zone_GOP.restaurants{
+            for food in restaurant.foods{
+                    if passedData?.name.lowercased() == food.name.lowercased(){
+                        restaurantList.append((restaurant, food))
+                    }
+                }
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        loadRestaurantList()
+        
+        print(restaurantList)
         
         let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(handleGesture))
         swipeRight.direction = .right
@@ -83,6 +99,22 @@ class FoodDetailViewController: UIViewController {
     //        else if gesture.direction == UISwipeGestureRecognizer.Direction.left {
     //            print("Swipe Left")
     //        }
+    
+    
+}
+
+
+extension FoodDetailViewController: UITableViewDataSource ,UITableViewDelegate{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return restaurantList.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "restaurantCell")
+        cell?.textLabel?.text = restaurantList[indexPath.row].rest.name
+        cell?.detailTextLabel?.text = "Rp. \(restaurantList[indexPath.row].food.price)"
+        return cell!
+    }
     
     
 }
