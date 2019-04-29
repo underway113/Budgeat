@@ -14,12 +14,16 @@ class TableViewController: UITableViewController {
     var passingData:Food?
     var restaurantData2:[Restaurant] = []
     var startsFrom:[String:Int] = [:]
-    
+    var refreshControl2: UIRefreshControl!
+
 
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        refreshControl2 = UIRefreshControl()
+        refreshControl2.attributedTitle = NSAttributedString(string: "Pull to refresh")
+        refreshControl2.addTarget(self, action: #selector(refresh), for: .valueChanged)
+        tableView.addSubview(refreshControl2)
         loadFoodData()
         
         // Uncomment the following line to preserve selection between presentations
@@ -63,7 +67,16 @@ class TableViewController: UITableViewController {
         }
     }
     
-
+    
+    @objc func refresh(_ sender: Any) {
+        print("refreshed")
+        //  your code to refresh tableView
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) { // Change `2.0` to the desired number of seconds.
+            // Code you want to be delayed
+            self.refreshControl2.endRefreshing()
+        }
+    }
+    
     func loadFoodData() {
         for restaurant in zone_GOP.restaurants {
             for food in restaurant.foods {
