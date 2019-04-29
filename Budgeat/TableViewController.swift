@@ -20,6 +20,7 @@ class TableViewController: UITableViewController {
 //    var restaurants:[Restaurant] = []
     var foodData2:[Food] = []
     var passingData:Food?
+    var restaurantData2:[Restaurant] = []
 //    var iterator = 0
     
 //    func loadFoodRestaurantData() {
@@ -69,7 +70,7 @@ class TableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "tableContentTemplate") as! TodayCell
         cell.foodName.text = foodData2[indexPath.row].name
-        cell.foodDetail.text = foodData2[indexPath.row].description
+        cell.foodDetail.text = restaurantData2[indexPath.row].name
         cell.foodImage.image = foodData2[indexPath.row].image
 
         return cell
@@ -96,6 +97,7 @@ class TableViewController: UITableViewController {
             for food in restaurant.foods {
                 if !foodData2.contains(where: {$0.name == food.name}) {
                     foodData2.append(food)
+                    restaurantData2.append(restaurant)
                 }
             }
         }
