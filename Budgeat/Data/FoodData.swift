@@ -12,8 +12,8 @@ import Foundation
 //Max Length Food Name: 21 character
 
 let wongJowos:[Food] = [
-    Food(name: "Siomay", description: "T11 Faves", price: 200, image: #imageLiteral(resourceName: "logo")),
-    Food(name: "Nasi", description: "White rice", price: 100, image: #imageLiteral(resourceName: "logo"))
+    Food(name: "Siomay", description: "T11 Faves", price: 200, image: #imageLiteral(resourceName: "logoLaunchScreen")),
+    Food(name: "Bubur", description: "Chicken Porridge", price: 100, image: #imageLiteral(resourceName: "bubur"))
 ]
 let laDings:[Food] = [
     Food(name: "Siomay", description: "T11 choice", price: 150, image: #imageLiteral(resourceName: "logo")),
