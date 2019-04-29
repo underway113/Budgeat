@@ -21,7 +21,8 @@ class TableViewController: UITableViewController {
     var foodData2:[Food] = []
     var passingData:Food?
     var restaurantData2:[Restaurant] = []
-//    var iterator = 0
+    var startsFrom:[String:Int] = [:]
+    
     
 //    func loadFoodRestaurantData() {
 //        for restaurant in zone_GOP.restaurants {
@@ -70,7 +71,9 @@ class TableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "tableContentTemplate") as! TodayCell
         cell.foodName.text = foodData2[indexPath.row].name
-        cell.foodDetail.text = restaurantData2[indexPath.row].name
+        let tempName:String = cell.foodName.text ?? "Not Found"
+        let tempPrice:Int = startsFrom[tempName] ?? 0
+        cell.foodDetail.text = "Starts from Rp. \(tempPrice)"
         cell.foodImage.image = foodData2[indexPath.row].image
 
         return cell
@@ -86,7 +89,7 @@ class TableViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "foodDetail" {
             let destination = segue.destination as? FoodDetailViewController
-            print(passingData)
+            //print(passingData)
             destination?.passedData = passingData
         }
     }
@@ -98,6 +101,14 @@ class TableViewController: UITableViewController {
                 if !foodData2.contains(where: {$0.name == food.name}) {
                     foodData2.append(food)
                     restaurantData2.append(restaurant)
+                }
+                if startsFrom[food.name] != nil {
+                    if startsFrom[food.name] ?? Int(UInt16.max) > food.price {
+                        startsFrom[food.name] = food.price
+                    }
+                }
+                else {
+                    startsFrom[food.name] = food.price
                 }
             }
         }
