@@ -10,30 +10,44 @@ import UIKit
 
 class TableViewController: UITableViewController {
 
+//
+//    @IBOutlet var foodImages: [UIImageView]!
+//    @IBOutlet var foodOverlays: [UIView]!
     
-    @IBOutlet var foodImages: [UIImageView]!
-    @IBOutlet var foodOverlays: [UIView]!
+    //    var categories = ["Siomay" , "Daging" , "Laut"]
+//    var prices = ["1000" , "2000" , "300"]
+//    var categories:[String] = []
+//    var restaurants:[Restaurant] = []
+    var foodData2:[Food] = []
+    var passingData:Food?
+//    var iterator = 0
     
-    var categories = ["Siomay" , "Daging" , "Laut"]
-    var prices = ["1000" , "2000" , "300"]
-    
-    
-    @IBAction func tap(_ sender: UITapGestureRecognizer) {
-        
-        selectedPic = foodImages[sender.view?.tag ?? 0].image
-        selectedName = categories[sender.view?.tag ?? 0]
-        
-        performSegue(withIdentifier: "foodDetail", sender: self)
-    }
+//    func loadFoodRestaurantData() {
+//        for restaurant in zone_GOP.restaurants {
+//            for food in restaurant.foods {
+//                if !categories.contains(food.name) {
+//                    categories.append(food.name)
+//                    print(categories)
+//                    break
+//                }
+//            }
+//            restaurants.append(restaurant)
+//        }
+//    }
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        for foodOverlay in foodOverlays {
-            foodOverlay.layer.cornerRadius = 6
-        }
-        for foodImage in foodImages {
-            foodImage.layer.cornerRadius = 6
-        }
+        
+//        loadFoodRestaurantData()
+        loadFoodData()
+        
+//        for foodOverlay in foodOverlays {
+//            foodOverlay.layer.cornerRadius = 6
+//        }
+//        for foodImage in foodImages {
+//            foodImage.layer.cornerRadius = 6
+//        }
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -43,26 +57,50 @@ class TableViewController: UITableViewController {
 
     // MARK: - Table view data source
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 1
-    }
+//    override func numberOfSections(in tableView: UITableView) -> Int {
+//        // #warning Incomplete implementation, return the number of sections
+//        return 1
+//    }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 4
+        return foodData2.count
     }
 
-    /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
+        let cell = tableView.dequeueReusableCell(withIdentifier: "tableContentTemplate") as! TodayCell
+        cell.foodName.text = foodData2[indexPath.row].name
+        cell.foodDetail.text = foodData2[indexPath.row].description
+        cell.foodImage.image = foodData2[indexPath.row].image
 
         return cell
     }
-    */
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let row = indexPath.row
+        
+        passingData = foodData2[row]
+        
 
+        performSegue(withIdentifier: "foodDetail", sender: row)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "foodDetail" {
+            let destination = segue.destination as? FoodDetailViewController
+            destination?.passedData = passingData
+        }
+    }
+    
+
+    func loadFoodData() {
+        for restaurant in zone_GOP.restaurants {
+            for food in restaurant.foods {
+                if !foodData2.contains(where: {$0.name == food.name}) {
+                    foodData2.append(food)
+                }
+            }
+        }
+    }
+    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
@@ -109,3 +147,5 @@ class TableViewController: UITableViewController {
     */
 
 }
+
+
