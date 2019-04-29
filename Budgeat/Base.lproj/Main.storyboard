@@ -94,7 +94,7 @@
             </objects>
             <point key="canvasLocation" x="1260.8695652173915" y="182.8125"/>
         </scene>
-        <!--Map View Controller-->
+        <!--Map-->
         <scene sceneID="MHG-oN-WxF">
             <objects>
                 <viewController id="QxX-72-tCH" customClass="MapViewController" customModule="Budgeat" customModuleProvider="target" sceneMemberID="viewController">
@@ -115,7 +115,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="1xw-jZ-ocb"/>
                     </view>
-                    <tabBarItem key="tabBarItem" systemItem="downloads" id="LOm-6T-z9R"/>
+                    <tabBarItem key="tabBarItem" title="Map" image="mapIcon" id="LOm-6T-z9R"/>
                     <connections>
                         <outlet property="mapView" destination="0FS-8d-CXf" id="CHq-SW-HoL"/>
                     </connections>
@@ -449,6 +449,7 @@
     <resources>
         <image name="backIcon" width="50" height="50"/>
         <image name="food1" width="940" height="529"/>
+        <image name="mapIcon" width="28" height="28"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="dV5-Cx-tXJ"/>
