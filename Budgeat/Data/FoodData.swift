@@ -19,7 +19,8 @@ let laDings:[Food] = [
     Food(name: "Siomay", description: "T11 choice", price: 18000, image: #imageLiteral(resourceName: "logo")),
     Food(name: "Mie Yamin Enak Mantap", description: "Feels gud", price: 20000, image: #imageLiteral(resourceName: "mieYamin")),
     Food(name: "Sop Iga", description: "Sop", price: 25000, image: #imageLiteral(resourceName: "logo")),
-    Food(name: "Nasi", description: "White rice", price: 6000, image: #imageLiteral(resourceName: "logo"))
+    Food(name: "Nasi", description: "White rice", price: 6000, image: #imageLiteral(resourceName: "logo")),
+    Food(name: "Soto Mie Bogor", description: "Soto enak di GOP 9", price: 17_000, image: #imageLiteral(resourceName: "sotoMIe"))
 ]
 
 let sushiTeis:[Food] = [
