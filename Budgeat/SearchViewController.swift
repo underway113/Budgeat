@@ -34,7 +34,7 @@ class SearchViewController: UIViewController {
         loadFoodData()
         
         // Do any additional setup after loading the view.
-        searchBar.searchBarStyle = UISearchBar.Style.minimal
+//        searchBar.searchBarStyle = UISearchBar.Style.minimal
         searchBar.placeholder = " Search..."
         searchBar.showsCancelButton = true
         

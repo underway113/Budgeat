@@ -10,7 +10,8 @@ import UIKit
 
 class FoodDetailViewController: UIViewController {
     
-    @IBAction func backButtonPressed(_ sender: UIButton) {
+   
+    @IBAction func backButtonPress(_ sender: UIButton) {
         dismissCustom()
     }
     
@@ -57,11 +58,11 @@ class FoodDetailViewController: UIViewController {
         swipeRight.direction = .right
         self.view.addGestureRecognizer(swipeRight)
         
-        let oldestUser = restaurantList.min { $0.food.price < $1.food.price }
+        let lowestPriceRestaurant = restaurantList.min { $0.food.price < $1.food.price }
         //        print("Passed Data = " + passedData?.name)
         categoryLabel.text = passedData?.name
         foodDetailImage.image = passedData?.image
-        priceLabel.text = "Rp.\(passedData?.price ?? 0)"
+        priceLabel.text = "Rp.\(lowestPriceRestaurant?.food.price ?? 0)"
         
 //        categoryLabel.text = selectedName
 //        priceLabel.text = "Rp. \(passedData?.price ?? 0)"
