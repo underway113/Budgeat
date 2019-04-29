@@ -95,7 +95,7 @@ class Search2ViewController: UIViewController, UITableViewDataSource, UITableVie
     }
     
     
-    //
+    //Get Food Data from FoodData.swift
     func loadFoodData() {
         for restaurant in zone_GOP.restaurants {
             for food in restaurant.foods {
