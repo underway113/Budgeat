@@ -58,10 +58,11 @@ class FoodDetailViewController: UIViewController {
         swipeRight.direction = .right
         self.view.addGestureRecognizer(swipeRight)
         
+        let oldestUser = restaurantList.min { $0.food.price < $1.food.price }
         //        print("Passed Data = " + passedData?.name)
         categoryLabel.text = passedData?.name
         foodDetailImage.image = passedData?.image
-        priceLabel.text = "\(passedData?.price ?? 0)"
+        priceLabel.text = "\(oldestUser?.food.price ?? 0)"
         
         //        categoryLabel.text = selectedName
         // priceLabel.text = "Rp." + receivedPrice!
@@ -96,10 +97,6 @@ class FoodDetailViewController: UIViewController {
     @objc func handleGesture(gesture: UISwipeGestureRecognizer) -> Void {
         dismissCustom()
     }
-    //        else if gesture.direction == UISwipeGestureRecognizer.Direction.left {
-    //            print("Swipe Left")
-    //        }
-    
     
 }
 

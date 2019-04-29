@@ -17,9 +17,9 @@ class Zone {
     var latitude:Double
     var longtitude:Double
     var image:UIImage
-    var distance:Double
+//    var distance:Double
     
-    init(name:String, description:String, restaurants:[Restaurant], priceRange:Int, latitude:Double, longtitude:Double, image:UIImage, distance:Double) {
+    init(name:String, description:String, restaurants:[Restaurant], priceRange:Int, latitude:Double, longtitude:Double, image:UIImage) {
         self.name = name
         self.description = description
         self.restaurants = restaurants
@@ -27,6 +27,6 @@ class Zone {
         self.latitude = latitude
         self.longtitude = longtitude
         self.image = image
-        self.distance = distance
+//        self.distance = distance
     }
 }

@@ -22,7 +22,6 @@
 		924CB60F2272BEF900B776E1 /* Zone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924CB60E2272BEF900B776E1 /* Zone.swift */; };
 		924CB6112272C11500B776E1 /* ZoneData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924CB6102272C11500B776E1 /* ZoneData.swift */; };
 		924CB6132272C15700B776E1 /* RestaurantData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924CB6122272C15700B776E1 /* RestaurantData.swift */; };
-		924CB617227324E600B776E1 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924CB616227324E600B776E1 /* Session.swift */; };
 		927B6805227159B400382C6E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927B6804227159B400382C6E /* AppDelegate.swift */; };
 		927B680A227159B400382C6E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 927B6808227159B400382C6E /* Main.storyboard */; };
 		927B680C227159B600382C6E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 927B680B227159B600382C6E /* Assets.xcassets */; };
@@ -66,7 +65,6 @@
 		924CB60E2272BEF900B776E1 /* Zone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Zone.swift; sourceTree = "<group>"; };
 		924CB6102272C11500B776E1 /* ZoneData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoneData.swift; sourceTree = "<group>"; };
 		924CB6122272C15700B776E1 /* RestaurantData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantData.swift; sourceTree = "<group>"; };
-		924CB616227324E600B776E1 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		927B6801227159B400382C6E /* Budgeat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Budgeat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		927B6804227159B400382C6E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		927B6809227159B400382C6E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -133,7 +131,6 @@
 				924CB60C2272BED000B776E1 /* Restaurant.swift */,
 				924CB60E2272BEF900B776E1 /* Zone.swift */,
 				1E36D48E2271994D00C4C180 /* Locations.swift */,
-				924CB616227324E600B776E1 /* Session.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -313,7 +310,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				924CB60B2272BEBA00B776E1 /* Food.swift in Sources */,
-				924CB617227324E600B776E1 /* Session.swift in Sources */,
 				4617F98A2272EDF5000313C4 /* SearchCell.swift in Sources */,
 				927B683522715F8700382C6E /* SearchViewController.swift in Sources */,
 				927B683322715F7E00382C6E /* TodayViewController.swift in Sources */,

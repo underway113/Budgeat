@@ -79,13 +79,13 @@ class TableViewController: UITableViewController {
         
         passingData = foodData2[row]
         
-
-        performSegue(withIdentifier: "foodDetail", sender: row)
+        performSegue(withIdentifier: "foodDetail", sender: self)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "foodDetail" {
             let destination = segue.destination as? FoodDetailViewController
+            print(passingData)
             destination?.passedData = passingData
         }
     }
