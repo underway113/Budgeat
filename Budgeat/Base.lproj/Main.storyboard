@@ -105,37 +105,57 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="0FS-8d-CXf">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </mapView>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bPo-1u-uN9">
-                                <rect key="frame" x="0.0" y="662" width="414" height="151"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bPo-1u-uN9">
+                                <rect key="frame" x="0.0" y="673" width="414" height="140"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qHw-wr-kgf">
-                                        <rect key="frame" x="0.0" y="0.0" width="195" height="151"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qHw-wr-kgf">
+                                        <rect key="frame" x="20" y="20" width="100" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="3Wb-tz-3U1"/>
+                                            <constraint firstAttribute="height" constant="100" id="Bwo-fg-oHj"/>
+                                        </constraints>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mVa-yK-hzF">
-                                        <rect key="frame" x="203" y="8" width="203" height="89"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mVa-yK-hzF">
+                                        <rect key="frame" x="140" y="20" width="200" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="200" id="HVA-g9-sN7"/>
+                                            <constraint firstAttribute="height" constant="40" id="z5L-uM-F7o"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="tdZ-lw-Wii">
-                                        <rect key="frame" x="203" y="105" width="203" height="38"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="tdZ-lw-Wii">
+                                        <rect key="frame" x="140" y="70" width="203" height="40"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="8hK-8d-hE8"/>
+                                            <constraint firstAttribute="width" constant="203" id="LLU-fj-4ES"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="tdZ-lw-Wii" firstAttribute="top" secondItem="mVa-yK-hzF" secondAttribute="bottom" constant="10" id="Bq4-fR-FOD"/>
+                                    <constraint firstItem="qHw-wr-kgf" firstAttribute="leading" secondItem="bPo-1u-uN9" secondAttribute="leading" constant="20" id="Un1-7g-0Ew"/>
+                                    <constraint firstItem="mVa-yK-hzF" firstAttribute="top" secondItem="bPo-1u-uN9" secondAttribute="top" constant="20" id="YdP-OL-s3J"/>
+                                    <constraint firstItem="tdZ-lw-Wii" firstAttribute="leading" secondItem="qHw-wr-kgf" secondAttribute="trailing" constant="20" id="fHb-s9-Sx9"/>
+                                    <constraint firstItem="qHw-wr-kgf" firstAttribute="top" secondItem="bPo-1u-uN9" secondAttribute="top" constant="20" id="hly-l7-cux"/>
+                                    <constraint firstAttribute="bottom" secondItem="qHw-wr-kgf" secondAttribute="bottom" constant="20" id="pJW-M7-xGg"/>
+                                    <constraint firstItem="mVa-yK-hzF" firstAttribute="leading" secondItem="qHw-wr-kgf" secondAttribute="trailing" constant="20" id="w4x-Qw-KNQ"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="bPo-1u-uN9" firstAttribute="bottom" secondItem="ob3-7g-mwI" secondAttribute="bottom" id="3cM-nh-R5e"/>
                             <constraint firstItem="0FS-8d-CXf" firstAttribute="leading" secondItem="ob3-7g-mwI" secondAttribute="leading" id="643-U6-rek"/>
                             <constraint firstItem="ob3-7g-mwI" firstAttribute="trailing" secondItem="0FS-8d-CXf" secondAttribute="trailing" id="DyB-9o-aYa"/>
+                            <constraint firstItem="bPo-1u-uN9" firstAttribute="leading" secondItem="ob3-7g-mwI" secondAttribute="leading" id="MfU-sl-QNA"/>
                             <constraint firstItem="ob3-7g-mwI" firstAttribute="bottom" secondItem="0FS-8d-CXf" secondAttribute="bottom" constant="-83" id="N07-5p-8rY"/>
+                            <constraint firstItem="bPo-1u-uN9" firstAttribute="trailing" secondItem="ob3-7g-mwI" secondAttribute="trailing" id="nKk-Dr-7jr"/>
                             <constraint firstItem="0FS-8d-CXf" firstAttribute="top" secondItem="U1J-tr-o3Q" secondAttribute="top" id="vRu-h6-5Iw"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ob3-7g-mwI"/>

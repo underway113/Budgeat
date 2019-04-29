@@ -10,7 +10,8 @@ import Foundation
 
 let gopRestaurants:[Restaurant] = [
     Restaurant(name: "Wong Jowo", description: "green eatery delicacy", priceRange: 30_000, foods: wongJowos, image: #imageLiteral(resourceName: "logo"), latitude: 1, longtitude: 1, distance: 2),
-    Restaurant(name: "La Ding", description: "green eatery eatery", priceRange: 40_000, foods: laDings, image: #imageLiteral(resourceName: "logo"), latitude: 2, longtitude: 2, distance: 2)
+    Restaurant(name: "La Ding", description: "green eatery eatery", priceRange: 40_000, foods: laDings, image: #imageLiteral(resourceName: "logo"), latitude: 2, longtitude: 2, distance: 2),
+    Restaurant(name: "Salad Fellas", description: "green eatery eatery", priceRange: 40_000, foods: saladFellas, image: #imageLiteral(resourceName: "logo"), latitude: 2, longtitude: 2, distance: 2)
 ]
 
 let breezeRestaurants:[Restaurant] = [
