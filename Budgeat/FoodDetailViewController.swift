@@ -14,16 +14,6 @@ class FoodDetailViewController: UIViewController {
     @IBAction func backButtonPress(_ sender: UIButton) {
         dismissCustom()
     }
-  
-    func dismissCustom() {
-        let transition: CATransition = CATransition()
-        transition.duration = 0.2
-        transition.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
-        transition.type = CATransitionType.reveal
-        transition.subtype = CATransitionSubtype.fromLeft
-        self.view.window!.layer.add(transition, forKey: nil)
-        self.dismiss(animated: false, completion: nil)
-    }
     
     @IBOutlet weak var categoryLabel: UILabel!
     
@@ -70,7 +60,7 @@ class FoodDetailViewController: UIViewController {
         
         //Sort Food Price Lowest to Highest
         restaurantList = restaurantList.sorted(by: { $0.food.price < $1.food.price })
-        print(restaurantList)
+//        print(restaurantList)
         
         let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(handleGesture))
         swipeRight.direction = .right
@@ -83,21 +73,21 @@ class FoodDetailViewController: UIViewController {
         let minimumBudget:Int = minPrice[categoryName]!
         let maximumBudget:Int = maxPrice[categoryName]!
         if minimumBudget != maximumBudget {
-            priceLabel.text = "Rp.\(minimumBudget) - Rp.\(maximumBudget)"
+            priceLabel.text = "\(formatNumber(minimumBudget)) - \(formatNumber(maximumBudget))"
         }
         else {
-            priceLabel.text = "Rp.\(minimumBudget)"
+            priceLabel.text = "\(formatNumber(minimumBudget))"
         }
 
 
         switch passedData?.price {
-        case _ where passedData?.price ?? 0 > 0 && passedData?.price ?? 0 <= 20_000:
+        case _ where passedData?.price ?? 0 > 0 && passedData?.price ?? 0 <= 10_000:
             dollarLabel.text = "$"
             dollarLabel.textColor = UIColor(red: 0.1, green: 0.8, blue: 0.2, alpha: 1)
-        case _ where passedData?.price ?? 0 > 20_000 && passedData?.price ?? 0 <= 40_000:
+        case _ where passedData?.price ?? 0 > 10_000 && passedData?.price ?? 0 <= 25_000:
             dollarLabel.text = "$$"
             dollarLabel.textColor = UIColor(red: 0.9, green: 0.39, blue: 0, alpha: 1)
-        case _ where passedData?.price ?? 0 > 40_000:
+        case _ where passedData?.price ?? 0 > 25_000:
             dollarLabel.text = "$$$"
             dollarLabel.textColor = UIColor(red: 0.95, green: 0.15, blue: 0.05, alpha: 1)
         default:
@@ -113,6 +103,16 @@ class FoodDetailViewController: UIViewController {
         dismissCustom()
     }
     
+    func dismissCustom() {
+        let transition: CATransition = CATransition()
+        transition.duration = 0.2
+        transition.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
+        transition.type = CATransitionType.reveal
+        transition.subtype = CATransitionSubtype.fromLeft
+        self.view.window!.layer.add(transition, forKey: nil)
+        self.dismiss(animated: false, completion: nil)
+    }
+    
 }
 
 
@@ -124,7 +124,7 @@ extension FoodDetailViewController: UITableViewDataSource ,UITableViewDelegate{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "restaurantCell")
         cell?.textLabel?.text = restaurantList[indexPath.row].rest.name
-        cell?.detailTextLabel?.text = "Rp. \(restaurantList[indexPath.row].food.price)"
+        cell?.detailTextLabel?.text = "\(formatNumber(restaurantList[indexPath.row].food.price))"
         return cell!
     }
     

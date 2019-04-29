@@ -15,15 +15,15 @@ let wongJowos:[Food] = [
     Food(name: "Siomay", description: "T11 Faves", price: 5000, image: #imageLiteral(resourceName: "siomay")),
     Food(name: "Porridge", description: "Chicken Porridge", price: 12000, image: #imageLiteral(resourceName: "bubur")),
     Food(name: "Rice", description: "White rice", price: 4000, image: #imageLiteral(resourceName: "rice")),
-    Food(name: "Fritter", description: "High Colesterol oily yummy crispy junk food of Indonesia", price: 2500, image: #imageLiteral(resourceName: "rice"))
+    Food(name: "Fritter", description: "High Colesterol oily yummy crispy junk food of Indonesia", price: 2500, image: #imageLiteral(resourceName: "fritter"))
 ]
 
 let laDings:[Food] = [
     Food(name: "Siomay", description: "T11 choice", price: 4000, image: #imageLiteral(resourceName: "siomay")),
     Food(name: "Soto Mie Bogor", description: "Soto from beside Bekasi", price: 17000, image: #imageLiteral(resourceName: "sotoMIe")),
     Food(name: "Rice", description: "White rice", price: 5000, image: #imageLiteral(resourceName: "rice")),
-    Food(name: "Morning Glory Noodle", description: "Water Spinach and Noodles in the morning", price: 17000, image: #imageLiteral(resourceName: "rice")),
-    Food(name: "Fritter", description: "High Colesterol oily yummy crispy junk food of Indonesia", price: 2000, image: #imageLiteral(resourceName: "rice"))
+    Food(name: "Morning Glory Noodle", description: "Water Spinach and Noodles in the morning", price: 17000, image: #imageLiteral(resourceName: "mieKangkung")),
+    Food(name: "Fritter", description: "High Colesterol oily yummy crispy junk food of Indonesia", price: 2000, image: #imageLiteral(resourceName: "fritter"))
 ]
 
 let warungKokoh:[Food] = [
@@ -33,10 +33,10 @@ let warungKokoh:[Food] = [
 let mustafaMinang:[Food] = [
     Food(name: "Rendang", description: "Yummy Beef", price: 17000, image: #imageLiteral(resourceName: "rendang")),
     Food(name: "Rice", description: "White Rice", price: 5000, image: #imageLiteral(resourceName: "rice")),
-    Food(name: "Balado Egg", description: "Spicy sunny side up egg", price: 6000, image: #imageLiteral(resourceName: "rice")),
-    Food(name: "Perkedel", description: "Mashed Potato with extra veggie shape of patty", price: 7000, image: #imageLiteral(resourceName: "rendang")),
-    Food(name: "Grilled Chicken", description: "Chicken that is grilled", price: 13000, image: #imageLiteral(resourceName: "rendang")),
-    Food(name: "Minced Beef", description: "Beef that cut into small pieces", price: 17000, image: #imageLiteral(resourceName: "rendang"))
+    Food(name: "Egg Balado", description: "Spicy sunny side up egg", price: 6000, image: #imageLiteral(resourceName: "eggBalado")),
+    Food(name: "Perkedel", description: "Mashed Potato with extra veggie shape of patty", price: 7000, image: #imageLiteral(resourceName: "perkedel")),
+    Food(name: "Grilled Chicken", description: "Chicken that is grilled", price: 13000, image: #imageLiteral(resourceName: "grilledChicken")),
+    Food(name: "Minced Beef", description: "Beef that cut into small pieces", price: 17000, image: #imageLiteral(resourceName: "mincedBeef"))
 ]
 
 let saladFellas:[Food] = [

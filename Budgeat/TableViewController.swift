@@ -39,9 +39,11 @@ class TableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "tableContentTemplate") as! TodayCell
         cell.foodName.text = foodData2[indexPath.row].name
+        
         let tempName:String = cell.foodName.text ?? "Not Found"
         let tempPrice:Int = startsFrom[tempName] ?? 0
-        cell.foodDetail.text = "Starts from Rp. \(tempPrice)"
+        
+        cell.foodDetail.text = "Starts from \(formatNumber(tempPrice))"
         cell.foodImage.image = foodData2[indexPath.row].image
 
         return cell

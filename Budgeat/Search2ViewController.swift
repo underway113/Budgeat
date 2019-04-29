@@ -25,8 +25,13 @@ class Search2ViewController: UIViewController, UITableViewDataSource, UITableVie
         print(searchText)
         searchFood2 = foodData2.filter({$0.name.lowercased().contains(searchText.lowercased())})
         searching2 = true
+        
+        
         if searchBar.text == "" {
             searching2 = false
+        }
+        else {
+            scrollToFirstRow()
         }
         
         resultTableView.reloadData()
@@ -80,6 +85,11 @@ class Search2ViewController: UIViewController, UITableViewDataSource, UITableVie
         }
     }
     
+    func scrollToFirstRow() {
+        let indexPath = IndexPath(row: 0, section: 0)
+        self.resultTableView.scrollToRow(at: indexPath, at: .top, animated: true)
+    }
+    
     //END TABLE
     
     override func viewDidLoad() {
@@ -87,6 +97,7 @@ class Search2ViewController: UIViewController, UITableViewDataSource, UITableVie
         loadFoodData()
         resultTableView.dataSource = self
         resultTableView.delegate = self
+        
         searchBar.delegate = self
         
         searchBar.searchBarStyle = UISearchBar.Style.minimal

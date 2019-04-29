@@ -213,7 +213,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
-                                            <color key="backgroundColor" red="0.055480647208121847" green="0.051923043980211837" blue="0.050065402268419844" alpha="0.69868364726027399" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="backgroundColor" red="0.054901960784313725" green="0.050980392156862744" blue="0.050980392156862744" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                                             <gestureRecognizers/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="435" id="DT6-Qd-YRZ"/>
@@ -327,7 +327,7 @@
             <objects>
                 <viewController id="n4B-PH-Nwf" customClass="FoodDetailViewController" customModule="Budgeat" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8P6-uZ-TmN">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Pd8-ap-vkY">
@@ -380,7 +380,7 @@
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O29-bC-5S9" userLabel="Overlay">
                                 <rect key="frame" x="0.0" y="44" width="414" height="250"/>
-                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.69999999999999996" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.25133775684931509" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="250" id="Z03-wz-VFI"/>
                                 </constraints>
@@ -406,10 +406,10 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4z0-IQ-GdJ">
-                                <rect key="frame" x="0.0" y="404" width="414" height="492"/>
+                                <rect key="frame" x="0.0" y="404" width="414" height="263"/>
                                 <subviews>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="pzC-Mm-nQT">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="492"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="263"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="restaurantCell" textLabel="yOI-iI-M9t" detailTextLabel="mMR-3A-YLd" rowHeight="127" style="IBUITableViewCellStyleValue1" id="OE4-Ln-ngO">
@@ -514,6 +514,6 @@
         <image name="todayIcon" width="20" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="mKD-ab-qIq"/>
+        <segue reference="dV5-Cx-tXJ"/>
     </inferredMetricsTieBreakers>
 </document>
