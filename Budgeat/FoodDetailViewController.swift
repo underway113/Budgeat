@@ -76,8 +76,6 @@ class FoodDetailViewController: UIViewController {
         swipeRight.direction = .right
         self.view.addGestureRecognizer(swipeRight)
         
-//        let lowestPriceRestaurant = restaurantList.min { $0.food.price < $1.food.price }
-        //        print("Passed Data = " + passedData?.name)
         categoryLabel.text = passedData?.name
         foodDetailImage.image = passedData?.image
         
@@ -90,10 +88,7 @@ class FoodDetailViewController: UIViewController {
         else {
             priceLabel.text = "Rp.\(minimumBudget)"
         }
-        
-//        categoryLabel.text = selectedName
-//        priceLabel.text = "Rp. \(passedData?.price ?? 0)"
-//        foodDetailImage.image = selectedPic
+
 
         switch passedData?.price {
         case _ where passedData?.price ?? 0 > 0 && passedData?.price ?? 0 <= 20_000:
@@ -110,7 +105,7 @@ class FoodDetailViewController: UIViewController {
             dollarLabel.textColor = UIColor(red: 20, green: 20, blue: 20, alpha: 0.1)
         }
         
-        // Do any additional setup after loading the view.
+        
     }
     
     

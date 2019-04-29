@@ -22,8 +22,6 @@ class MapViewController: UIViewController,MKMapViewDelegate, CLLocationManagerDe
     var userLocation:CLLocation = CLLocation(latitude: -6.222979, longitude: 106.652451)
     let regionRadius: CLLocationDistance = 1000
     
-    //    let gopAnnotation = Locations(title: "GOP9", locationName: zone_GOP.name, locationDesc: zone_GOP.description, coordinate: CLLocationCoordinate2D(latitude: zone_GOP.latitude, longitude: zone_GOP.longtitude), image: zone_Breeze.image)
-    //    let breezeAnnotation = Locations(title: "Breeze", locationName: zone_Breeze.name, locationDesc: zone_Breeze.description, coordinate: CLLocationCoordinate2D(latitude: zone_Breeze.latitude, longitude: zone_Breeze.longtitude), image: zone_Breeze.image)
     private var allAnnotations: [MKAnnotation]?
     
     func loadLocationData() {
@@ -44,8 +42,6 @@ class MapViewController: UIViewController,MKMapViewDelegate, CLLocationManagerDe
             locationManager.startUpdatingLocation()
         }
         
-        // mapView(mapView, annotationView: LocationsMarkerView, calloutAccessoryControlTapped: <#T##UIControl#>)
-        
         detailMapView.alpha = 1
         
         // Initialize map
@@ -55,8 +51,6 @@ class MapViewController: UIViewController,MKMapViewDelegate, CLLocationManagerDe
         
         mapView.userTrackingMode = .follow
         
-        //mapView.delegate = self as? MKMapViewDelegate
-        //        allAnnotations = [breezeAnnotation, gopAnnotation]
         mapView.addAnnotations(allAnnotations!)
         
         //Stop Location user, better battery life
@@ -76,7 +70,6 @@ class MapViewController: UIViewController,MKMapViewDelegate, CLLocationManagerDe
         mapView.setRegion(coordinateRegion, animated: true)
     }
     
-    //Detail click(callout)
     func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
         print("asd")
         if control == view.rightCalloutAccessoryView {

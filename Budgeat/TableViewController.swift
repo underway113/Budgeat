@@ -10,46 +10,18 @@ import UIKit
 
 class TableViewController: UITableViewController {
 
-//
-//    @IBOutlet var foodImages: [UIImageView]!
-//    @IBOutlet var foodOverlays: [UIView]!
-    
-    //    var categories = ["Siomay" , "Daging" , "Laut"]
-//    var prices = ["1000" , "2000" , "300"]
-//    var categories:[String] = []
-//    var restaurants:[Restaurant] = []
     var foodData2:[Food] = []
     var passingData:Food?
     var restaurantData2:[Restaurant] = []
     var startsFrom:[String:Int] = [:]
     
-    
-//    func loadFoodRestaurantData() {
-//        for restaurant in zone_GOP.restaurants {
-//            for food in restaurant.foods {
-//                if !categories.contains(food.name) {
-//                    categories.append(food.name)
-//                    print(categories)
-//                    break
-//                }
-//            }
-//            restaurants.append(restaurant)
-//        }
-//    }
 
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        loadFoodRestaurantData()
         loadFoodData()
         
-//        for foodOverlay in foodOverlays {
-//            foodOverlay.layer.cornerRadius = 6
-//        }
-//        for foodImage in foodImages {
-//            foodImage.layer.cornerRadius = 6
-//        }
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -57,12 +29,8 @@ class TableViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
 
+    
     // MARK: - Table view data source
-
-//    override func numberOfSections(in tableView: UITableView) -> Int {
-//        // #warning Incomplete implementation, return the number of sections
-//        return 1
-//    }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return foodData2.count
@@ -89,7 +57,6 @@ class TableViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "foodDetail" {
             let destination = segue.destination as? FoodDetailViewController
-            //print(passingData)
             destination?.passedData = passingData
         }
     }
