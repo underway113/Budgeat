@@ -34,7 +34,6 @@ class FoodDetailViewController: UIViewController {
     
     var passedData:Food?
     var foodName:String?
-    //var foodPrice: Int
     var restaurantList:[(rest :Restaurant, food : Food)] = []
     
     func loadRestaurantList(){
@@ -61,33 +60,26 @@ class FoodDetailViewController: UIViewController {
         //        print("Passed Data = " + passedData?.name)
         categoryLabel.text = passedData?.name
         foodDetailImage.image = passedData?.image
-        priceLabel.text = "\(passedData?.price ?? 0)"
+        priceLabel.text = "Rp.\(passedData?.price ?? 0)"
         
-        //        categoryLabel.text = selectedName
-        // priceLabel.text = "Rp." + receivedPrice!
-        //        foodDetailImage.image = selectedPic
-        
-        //        if Int(receivedPrice!) == nil {
-        //            intReceivedPrice = 0
-        //        }
-        //        else {
-        //            intReceivedPrice = Int(receivedPrice!)
-        //        }
-        //
-        //        switch intReceivedPrice {
-        //        case _ where intReceivedPrice! > 0 && intReceivedPrice! <= 20_000:
-        //            dollarLabel.text = "$"
-        //            dollarLabel.textColor = UIColor(red: 0.15, green: 0.9, blue: 0.2, alpha: 1)
-        //        case _ where intReceivedPrice! > 20_000 && intReceivedPrice! <= 40_000:
-        //            dollarLabel.text = "$$"
-        //            dollarLabel.textColor = UIColor(red: 0.6, green: 0.4, blue: 0.4, alpha: 1)
-        //        case _ where intReceivedPrice! > 40_000:
-        //            dollarLabel.text = "$$$"
-        //            dollarLabel.textColor = UIColor(red: 1, green: 0.1, blue: 0.05, alpha: 1)
-        //        default:
-        //            dollarLabel.text = "!"
-        //            dollarLabel.textColor = UIColor(red: 20, green: 20, blue: 20, alpha: 0.1)
-        //        }
+//        categoryLabel.text = selectedName
+//        priceLabel.text = "Rp. \(passedData?.price ?? 0)"
+//        foodDetailImage.image = selectedPic
+
+        switch passedData?.price {
+        case _ where passedData?.price ?? 0 > 0 && passedData?.price ?? 0 <= 20_000:
+            dollarLabel.text = "$"
+            dollarLabel.textColor = UIColor(red: 0.1, green: 0.8, blue: 0.2, alpha: 1)
+        case _ where passedData?.price ?? 0 > 20_000 && passedData?.price ?? 0 <= 40_000:
+            dollarLabel.text = "$$"
+            dollarLabel.textColor = UIColor(red: 0.7, green: 0.5, blue: 0.5, alpha: 1)
+        case _ where passedData?.price ?? 0 > 40_000:
+            dollarLabel.text = "$$$"
+            dollarLabel.textColor = UIColor(red: 0.95, green: 0.15, blue: 0.05, alpha: 1)
+        default:
+            dollarLabel.text = "!"
+            dollarLabel.textColor = UIColor(red: 20, green: 20, blue: 20, alpha: 0.1)
+        }
         
         // Do any additional setup after loading the view.
     }
