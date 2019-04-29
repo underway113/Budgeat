@@ -52,14 +52,7 @@ class FoodDetailViewController: UIViewController {
             }
         }
     }
-    
-    func changedCurrency(priceValue : Int) -> String {
-        let formatter = NumberFormatter()
-        formatter.numberStyle = .currency
-        formatter.locale = Locale.init(identifier: "id-ID")
-        formatter.currencyCode = "Rp "
-        return formatter.string(from: NSNumber(value: priceValue)) ?? String(priceValue)
-    }
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -82,10 +75,10 @@ class FoodDetailViewController: UIViewController {
         let maximumBudget:Int = maxPrice[categoryName]!
         
         if minimumBudget != maximumBudget {
-            priceLabel.text = "\(changedCurrency(priceValue: minimumBudget)) - \(changedCurrency(priceValue: maximumBudget))"
+            priceLabel.text = "\(formatNumber(minimumBudget)) - \(formatNumber(maximumBudget))"
         }
         else {
-            priceLabel.text = "\(changedCurrency(priceValue: minimumBudget))"
+            priceLabel.text = "\(formatNumber(minimumBudget))"
         }
 
 
@@ -133,7 +126,7 @@ extension FoodDetailViewController: UITableViewDataSource ,UITableViewDelegate{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "restaurantCell")
         cell?.textLabel?.text = restaurantList[indexPath.row].rest.name
-        cell?.detailTextLabel?.text = "\(changedCurrency(priceValue: restaurantList[indexPath.row].food.price))"
+        cell?.detailTextLabel?.text = "\(formatNumber( restaurantList[indexPath.row].food.price))"
         return cell!
     }
     

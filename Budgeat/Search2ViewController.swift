@@ -103,8 +103,6 @@ class Search2ViewController: UIViewController, UITableViewDataSource, UITableVie
         resultTableView.delegate = self
         
         searchBar.delegate = self
-        
-        searchBar.searchBarStyle = UISearchBar.Style.minimal
         searchBar.placeholder = " Search..."
         
     }

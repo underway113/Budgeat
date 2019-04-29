@@ -33,13 +33,6 @@ class TableViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
     
-    func changedCurrency(priceValue : Int) -> String {
-        let formatter = NumberFormatter()
-        formatter.numberStyle = .currency
-        formatter.locale = Locale.init(identifier: "id-ID")
-        formatter.currencyCode = "Rp "
-        return formatter.string(from: NSNumber(value: priceValue)) ?? String(priceValue)
-    }
     
     // MARK: - Table view data source
 
@@ -54,7 +47,7 @@ class TableViewController: UITableViewController {
         let tempName:String = cell.foodName.text ?? "Not Found"
         let tempPrice:Int = startsFrom[tempName] ?? 0
         
-        cell.foodDetail.text = "Starts from \(changedCurrency(priceValue: tempPrice))"
+        cell.foodDetail.text = "Starts from \(formatNumber(tempPrice))"
         cell.foodImage.image = foodData2[indexPath.row].image
 
         return cell

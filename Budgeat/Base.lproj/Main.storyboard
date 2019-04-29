@@ -23,9 +23,10 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="56" id="CLd-rR-QmI"/>
                                 </constraints>
-                                <textInputTraits key="textInputTraits" smartInsertDeleteType="yes"/>
+                                <color key="barTintColor" red="0.8901960784313725" green="0.8901960784313725" blue="0.8901960784313725" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <textInputTraits key="textInputTraits"/>
                             </searchBar>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="interactive" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="QmP-3q-osb">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="QmP-3q-osb">
                                 <rect key="frame" x="0.0" y="100" width="414" height="713"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
@@ -328,7 +329,7 @@
             <objects>
                 <viewController id="n4B-PH-Nwf" customClass="FoodDetailViewController" customModule="Budgeat" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8P6-uZ-TmN">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Pd8-ap-vkY">
@@ -407,10 +408,10 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4z0-IQ-GdJ">
-                                <rect key="frame" x="0.0" y="404" width="414" height="263"/>
+                                <rect key="frame" x="0.0" y="404" width="414" height="492"/>
                                 <subviews>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="pzC-Mm-nQT">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="263"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="492"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="restaurantCell" textLabel="yOI-iI-M9t" detailTextLabel="mMR-3A-YLd" rowHeight="127" style="IBUITableViewCellStyleValue1" id="OE4-Ln-ngO">
@@ -512,9 +513,9 @@
         <image name="backIcon" width="73.5" height="133.5"/>
         <image name="food1" width="940" height="529"/>
         <image name="mapIcon" width="28" height="28"/>
-        <image name="todayIcon" width="20" height="25"/>
+        <image name="todayIcon" width="20" height="24"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="dV5-Cx-tXJ"/>
+        <segue reference="mKD-ab-qIq"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -14,9 +14,8 @@ func formatNumber(_ number:Int) -> String {
     let formatter = NumberFormatter()
     formatter.numberStyle = .currency
     formatter.maximumFractionDigits = 0
-    formatter.paddingPosition = .afterPrefix
-    formatter.paddingCharacter = " "
-    formatter.formatWidth = 10
+    formatter.locale = Locale.init(identifier: "id-ID")
+    formatter.currencyCode = "Rp "
     
     return formatter.string(for: number) ?? "Invalid Value"
 }
