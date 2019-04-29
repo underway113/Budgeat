@@ -17,6 +17,7 @@
 		469FFD442274B331004276B8 /* Search2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469FFD432274B331004276B8 /* Search2ViewController.swift */; };
 		469FFD462274B7B7004276B8 /* Search2TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469FFD452274B7B7004276B8 /* Search2TableViewCell.swift */; };
 		469FFD48227583B2004276B8 /* LaunchScreen2.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 469FFD47227583B2004276B8 /* LaunchScreen2.storyboard */; };
+		469FFD4A2276F057004276B8 /* CustomShowDetailSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469FFD492276F057004276B8 /* CustomShowDetailSegue.swift */; };
 		924CB60B2272BEBA00B776E1 /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924CB60A2272BEBA00B776E1 /* Food.swift */; };
 		924CB60D2272BED000B776E1 /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924CB60C2272BED000B776E1 /* Restaurant.swift */; };
 		924CB60F2272BEF900B776E1 /* Zone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924CB60E2272BEF900B776E1 /* Zone.swift */; };
@@ -60,6 +61,7 @@
 		469FFD432274B331004276B8 /* Search2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Search2ViewController.swift; sourceTree = "<group>"; };
 		469FFD452274B7B7004276B8 /* Search2TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Search2TableViewCell.swift; sourceTree = "<group>"; };
 		469FFD47227583B2004276B8 /* LaunchScreen2.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen2.storyboard; sourceTree = "<group>"; };
+		469FFD492276F057004276B8 /* CustomShowDetailSegue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomShowDetailSegue.swift; sourceTree = "<group>"; };
 		924CB60A2272BEBA00B776E1 /* Food.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
 		924CB60C2272BED000B776E1 /* Restaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
 		924CB60E2272BEF900B776E1 /* Zone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Zone.swift; sourceTree = "<group>"; };
@@ -174,6 +176,7 @@
 				469FFD452274B7B7004276B8 /* Search2TableViewCell.swift */,
 				469FFD47227583B2004276B8 /* LaunchScreen2.storyboard */,
 				1E34ED462275FBF6003D3CB5 /* TodayCell.swift */,
+				469FFD492276F057004276B8 /* CustomShowDetailSegue.swift */,
 			);
 			path = Budgeat;
 			sourceTree = "<group>";
@@ -327,6 +330,7 @@
 				469FFD462274B7B7004276B8 /* Search2TableViewCell.swift in Sources */,
 				927B683722715F8C00382C6E /* MapViewController.swift in Sources */,
 				924CB60F2272BEF900B776E1 /* Zone.swift in Sources */,
+				469FFD4A2276F057004276B8 /* CustomShowDetailSegue.swift in Sources */,
 				924CB6112272C11500B776E1 /* ZoneData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

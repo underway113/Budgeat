@@ -12,13 +12,13 @@ import Foundation
 //Max Length Food Name: 21 character
 
 let wongJowos:[Food] = [
-    Food(name: "Siomay", description: "T11 Faves", price: 3000, image: #imageLiteral(resourceName: "logoLaunchScreen")),
+    Food(name: "Siomay", description: "T11 Faves", price: 5000, image: #imageLiteral(resourceName: "siomay")),
     Food(name: "Porridge", description: "Chicken Porridge", price: 12000, image: #imageLiteral(resourceName: "bubur")),
     Food(name: "Rice", description: "White rice", price: 5000, image: #imageLiteral(resourceName: "logo"))
 ]
 let laDings:[Food] = [
-    Food(name: "Siomay", description: "T11 choice", price: 4000, image: #imageLiteral(resourceName: "logo")),
-    Food(name: "Yamin Noodle Awesome Ashiap", description: "Feels gud", price: 20000, image: #imageLiteral(resourceName: "mieYamin")),
+    Food(name: "Siomay", description: "T11 choice", price: 4000, image: #imageLiteral(resourceName: "siomay")),
+    Food(name: "Yamin Noodle", description: "Feels gud", price: 20000, image: #imageLiteral(resourceName: "mieYamin")),
     Food(name: "Ribs Soup", description: "Sop", price: 25000, image: #imageLiteral(resourceName: "logo")),
     Food(name: "Rice", description: "White rice", price: 6000, image: #imageLiteral(resourceName: "logo"))
 ]

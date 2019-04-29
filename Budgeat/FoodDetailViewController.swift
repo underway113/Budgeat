@@ -14,7 +14,7 @@ class FoodDetailViewController: UIViewController {
     @IBAction func backButtonPress(_ sender: UIButton) {
         dismissCustom()
     }
-    
+  
     func dismissCustom() {
         let transition: CATransition = CATransition()
         transition.duration = 0.2
@@ -68,13 +68,15 @@ class FoodDetailViewController: UIViewController {
         
         loadRestaurantList()
         
+        //Sort Food Price Lowest to Highest
+        restaurantList = restaurantList.sorted(by: { $0.food.price < $1.food.price })
         print(restaurantList)
         
         let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(handleGesture))
         swipeRight.direction = .right
         self.view.addGestureRecognizer(swipeRight)
         
-        let lowestPriceRestaurant = restaurantList.min { $0.food.price < $1.food.price }
+//        let lowestPriceRestaurant = restaurantList.min { $0.food.price < $1.food.price }
         //        print("Passed Data = " + passedData?.name)
         categoryLabel.text = passedData?.name
         foodDetailImage.image = passedData?.image
