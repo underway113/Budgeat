@@ -35,14 +35,30 @@ class FoodDetailViewController: UIViewController {
     var passedData:Food?
     var foodName:String?
     var restaurantList:[(rest :Restaurant, food : Food)] = []
+    var minPrice:[String:Int] = [:]
+    var maxPrice:[String:Int] = [:]
     
     func loadRestaurantList(){
         for restaurant in zone_GOP.restaurants{
             for food in restaurant.foods{
-                    if passedData?.name.lowercased() == food.name.lowercased(){
-                        restaurantList.append((restaurant, food))
+                if passedData?.name.lowercased() == food.name.lowercased(){
+                    restaurantList.append((restaurant, food))
+                }
+                
+                if minPrice[food.name] != nil && maxPrice[food.name] != nil{
+                    if minPrice[food.name] ?? Int(UInt16.max) > food.price {
+                        minPrice[food.name] = food.price
+                    }
+                    
+                    if maxPrice[food.name] ?? Int(UInt16.min) < food.price {
+                        maxPrice[food.name] = food.price
                     }
                 }
+                else {
+                    minPrice[food.name] = food.price
+                    maxPrice[food.name] = food.price
+                }
+            }
         }
     }
     
@@ -61,7 +77,16 @@ class FoodDetailViewController: UIViewController {
         //        print("Passed Data = " + passedData?.name)
         categoryLabel.text = passedData?.name
         foodDetailImage.image = passedData?.image
-        priceLabel.text = "Rp.\(passedData?.price ?? 0)"
+        
+        let categoryName:String = categoryLabel.text ?? "Not Found"
+        let minimumBudget:Int = minPrice[categoryName]!
+        let maximumBudget:Int = maxPrice[categoryName]!
+        if minimumBudget != maximumBudget {
+            priceLabel.text = "Rp.\(minimumBudget) - Rp.\(maximumBudget)"
+        }
+        else {
+            priceLabel.text = "Rp.\(minimumBudget)"
+        }
         
 //        categoryLabel.text = selectedName
 //        priceLabel.text = "Rp. \(passedData?.price ?? 0)"
@@ -73,12 +98,12 @@ class FoodDetailViewController: UIViewController {
             dollarLabel.textColor = UIColor(red: 0.1, green: 0.8, blue: 0.2, alpha: 1)
         case _ where passedData?.price ?? 0 > 20_000 && passedData?.price ?? 0 <= 40_000:
             dollarLabel.text = "$$"
-            dollarLabel.textColor = UIColor(red: 0.7, green: 0.5, blue: 0.5, alpha: 1)
+            dollarLabel.textColor = UIColor(red: 0.9, green: 0.39, blue: 0, alpha: 1)
         case _ where passedData?.price ?? 0 > 40_000:
             dollarLabel.text = "$$$"
             dollarLabel.textColor = UIColor(red: 0.95, green: 0.15, blue: 0.05, alpha: 1)
         default:
-            dollarLabel.text = "!"
+            dollarLabel.text = "?"
             dollarLabel.textColor = UIColor(red: 20, green: 20, blue: 20, alpha: 0.1)
         }
         

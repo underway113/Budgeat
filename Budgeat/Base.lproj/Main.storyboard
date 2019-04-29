@@ -278,7 +278,7 @@
             <objects>
                 <viewController id="n4B-PH-Nwf" customClass="FoodDetailViewController" customModule="Budgeat" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8P6-uZ-TmN">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.75" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Pd8-ap-vkY">
@@ -350,10 +350,10 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4z0-IQ-GdJ">
-                                <rect key="frame" x="0.0" y="310" width="414" height="357"/>
+                                <rect key="frame" x="0.0" y="310" width="414" height="586"/>
                                 <subviews>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="pzC-Mm-nQT">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="315"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="544"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="restaurantCell" textLabel="yOI-iI-M9t" detailTextLabel="mMR-3A-YLd" rowHeight="127" style="IBUITableViewCellStyleValue1" id="OE4-Ln-ngO">
@@ -452,6 +452,6 @@
         <image name="mapIcon" width="28" height="28"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="dV5-Cx-tXJ"/>
+        <segue reference="mKD-ab-qIq"/>
     </inferredMetricsTieBreakers>
 </document>
