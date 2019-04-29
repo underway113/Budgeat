@@ -27,7 +27,7 @@ let laDings:[Food] = [
 ]
 
 let warungKokoh:[Food] = [
-    Food(name: "Yamin Noodle", description: "Feels gud", price: 20000, image: #imageLiteral(resourceName: "mieYamin"), tag: "Mie yamin")
+    Food(name: "Yamin Noodle & Wonton", description: "Feels gud", price: 25000, image: #imageLiteral(resourceName: "mieYamin"), tag: "Mie yamin")
 ]
 
 let mustafaMinang:[Food] = [

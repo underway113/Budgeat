@@ -53,6 +53,14 @@ class FoodDetailViewController: UIViewController {
         }
     }
     
+    func changedCurrency(priceValue : Int) -> String {
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .currency
+        formatter.locale = Locale.init(identifier: "id-ID")
+        formatter.currencyCode = "Rp "
+        return formatter.string(from: NSNumber(value: priceValue)) ?? String(priceValue)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -72,22 +80,23 @@ class FoodDetailViewController: UIViewController {
         let categoryName:String = categoryLabel.text ?? "Not Found"
         let minimumBudget:Int = minPrice[categoryName]!
         let maximumBudget:Int = maxPrice[categoryName]!
+        
         if minimumBudget != maximumBudget {
-            priceLabel.text = "\(formatNumber(minimumBudget)) - \(formatNumber(maximumBudget))"
+            priceLabel.text = "\(changedCurrency(priceValue: minimumBudget)) - \(changedCurrency(priceValue: maximumBudget))"
         }
         else {
-            priceLabel.text = "\(formatNumber(minimumBudget))"
+            priceLabel.text = "\(changedCurrency(priceValue: minimumBudget))"
         }
 
 
         switch passedData?.price {
-        case _ where passedData?.price ?? 0 > 0 && passedData?.price ?? 0 <= 10_000:
+        case _ where passedData?.price ?? 0 > 0 && passedData?.price ?? 0 <= 20_000:
             dollarLabel.text = "$"
             dollarLabel.textColor = UIColor(red: 0.1, green: 0.8, blue: 0.2, alpha: 1)
-        case _ where passedData?.price ?? 0 > 10_000 && passedData?.price ?? 0 <= 25_000:
+        case _ where passedData?.price ?? 0 > 20_000 && passedData?.price ?? 0 <= 30_000:
             dollarLabel.text = "$$"
             dollarLabel.textColor = UIColor(red: 0.9, green: 0.39, blue: 0, alpha: 1)
-        case _ where passedData?.price ?? 0 > 25_000:
+        case _ where passedData?.price ?? 0 > 30_000:
             dollarLabel.text = "$$$"
             dollarLabel.textColor = UIColor(red: 0.95, green: 0.15, blue: 0.05, alpha: 1)
         default:
@@ -124,7 +133,7 @@ extension FoodDetailViewController: UITableViewDataSource ,UITableViewDelegate{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "restaurantCell")
         cell?.textLabel?.text = restaurantList[indexPath.row].rest.name
-        cell?.detailTextLabel?.text = "\(formatNumber(restaurantList[indexPath.row].food.price))"
+        cell?.detailTextLabel?.text = "\(changedCurrency(priceValue: restaurantList[indexPath.row].food.price))"
         return cell!
     }
     
